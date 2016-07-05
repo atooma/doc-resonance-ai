@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 
@@ -7,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Index &mdash; Resonance AI SDK 2.1.0 documentation</title>
+    <title>6. Info API &mdash; Resonance AI SDK 2.1.0 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -33,6 +32,7 @@
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="top" title="Resonance AI SDK 2.1.0 documentation" href="index.html" />
+    <link rel="prev" title="5. Context API" href="contextapi.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -67,7 +67,7 @@
      href="index.html">Contents <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul>
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="intro.html#what-we-believe">1.1. What We Believe?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="intro.html#what-is-resonance-why-there-is-an-atooma-app-on-the-market">1.2. What Is Resonance - Why There Is An Atooma App On The Market?</a></li>
@@ -205,14 +205,14 @@
 <li class="toctree-l2"><a class="reference internal" href="contextapi.html#holidays-api">5.8. Holidays API</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="infoapi.html">6. Info API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="infoapi.html#user-basic-habits">6.1. User Basic Habits</a></li>
-<li class="toctree-l2"><a class="reference internal" href="infoapi.html#vehicle">6.2. Vehicle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="infoapi.html#suggestions">6.3. Suggestions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="infoapi.html#weather">6.4. Weather</a></li>
-<li class="toctree-l2"><a class="reference internal" href="infoapi.html#traffic">6.5. Traffic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="infoapi.html#fitness">6.6. Fitness</a></li>
-<li class="toctree-l2"><a class="reference internal" href="infoapi.html#shopping-habits">6.7. Shopping Habits</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Info API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#user-basic-habits">6.1. User Basic Habits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vehicle">6.2. Vehicle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#suggestions">6.3. Suggestions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#weather">6.4. Weather</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#traffic">6.5. Traffic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fitness">6.6. Fitness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shopping-habits">6.7. Shopping Habits</a></li>
 </ul>
 </li>
 </ul>
@@ -243,16 +243,283 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">6. Info API</a><ul>
+<li><a class="reference internal" href="#user-basic-habits">6.1. User Basic Habits</a></li>
+<li><a class="reference internal" href="#vehicle">6.2. Vehicle</a></li>
+<li><a class="reference internal" href="#suggestions">6.3. Suggestions</a></li>
+<li><a class="reference internal" href="#weather">6.4. Weather</a></li>
+<li><a class="reference internal" href="#traffic">6.5. Traffic</a></li>
+<li><a class="reference internal" href="#fitness">6.6. Fitness</a></li>
+<li><a class="reference internal" href="#shopping-habits">6.7. Shopping Habits</a></li>
+</ul>
+</li>
+</ul>
+
         </div>
       </div>
     <div class="col-md-9 content">
       
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="info-api">
+<h1>6. Info API<a class="headerlink" href="#info-api" title="Permalink to this headline">¶</a></h1>
+<p>Resonance AI implements a set of functions, allowing to get specific information about users and their attitudes.</p>
+<p>Below are reported some example of questions that Resonance AI is able to answer to developers:</p>
+<p>Which are user Home / Work locations?
+Where user parked his car?
+User is driving. Which is his most probable destination?
+Which are user favorite restaurants?
+What is important to highlight is that information comes from data analysis on backend and doesn’t require a direct user input (in case feedbacks can be used for adjusting results).</p>
+<p>The Info APIs are collected in the following categories:</p>
+<ul class="simple">
+<li>User Basic Habits</li>
+<li>Vehicle</li>
+<li>Suggestions</li>
+<li>Weather</li>
+<li>Traffic</li>
+<li>Fitness</li>
+<li>Shopping Habits</li>
+<li>RAW data</li>
+</ul>
+<div class="section" id="user-basic-habits">
+<h2>6.1. User Basic Habits<a class="headerlink" href="#user-basic-habits" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="33%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">API</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>wake_up_time</td>
+<td>time when the user wakes up;</td>
+</tr>
+<tr class="row-odd"><td>slip_time</td>
+<td>time when the user goes to sleep;</td>
+</tr>
+<tr class="row-even"><td>to_work</td>
+<td>time when the user leaves home to go at work;</td>
+</tr>
+<tr class="row-odd"><td>to_home</td>
+<td>time when the user leaves work to go at home;</td>
+</tr>
+<tr class="row-even"><td>restaurant_day</td>
+<td>day of the week when the user goes to restaurant</td>
+</tr>
+<tr class="row-odd"><td>cinema_day</td>
+<td>day of the week when the user goes to cinema</td>
+</tr>
+</tbody>
+</table>
+<p>The devices used to estimate these informations are:</p>
+<ul class="simple">
+<li>Android/iOS</li>
+<li>Fitbit</li>
+<li>Jawbone Up</li>
+</ul>
+</div>
+<div class="section" id="vehicle">
+<h2>6.2. Vehicle<a class="headerlink" href="#vehicle" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="33%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">API</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>trip_destination</td>
+<td>predicted destination of the trip;</td>
+</tr>
+<tr class="row-odd"><td>car_location</td>
+<td>GPS position of the car;</td>
+</tr>
+<tr class="row-even"><td>car_status</td>
+<td>alert and error status of the car;</td>
+</tr>
+<tr class="row-odd"><td>legal_trip_percentage</td>
+<td>percentage of the time under speed limit;</td>
+</tr>
+<tr class="row-even"><td>fuel_station_near_by</td>
+<td>list of fuel statation;</td>
+</tr>
+</tbody>
+</table>
+<p>The devices used to estimate these informations are:</p>
+<ul class="simple">
+<li>Android/iOS</li>
+<li>Samsung Connect Auto</li>
+<li>TEXA OBD</li>
+<li>Octo OBD</li>
+<li>Automatic</li>
+<li>VIASAT</li>
+</ul>
+</div>
+<div class="section" id="suggestions">
+<h2>6.3. Suggestions<a class="headerlink" href="#suggestions" title="Permalink to this headline">¶</a></h2>
+<p>Resonance AI provides a series of messages for the user to suggest actions.</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="33%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Message type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>vehicle_suggestion</td>
+<td>tricks about the car (oil control, ...);</td>
+</tr>
+<tr class="row-odd"><td>home_suggestion</td>
+<td>tricks about home (home temperature, ...);</td>
+</tr>
+<tr class="row-even"><td>path_suggestion</td>
+<td>path to go at work or at meetings;</td>
+</tr>
+</tbody>
+</table>
+<p>The devices used to estimate these informations are:</p>
+<ul class="simple">
+<li>Android/iOS</li>
+<li>Fitbit</li>
+<li>Jawbone Up</li>
+<li>Samsung Connect Auto</li>
+<li>TEXA OBD</li>
+<li>Octo OBD</li>
+<li>Automatic</li>
+<li>VIASAT</li>
+<li>Nest</li>
+<li>Netatmo Thermostat</li>
+<li>Smartthings</li>
+</ul>
+</div>
+<div class="section" id="weather">
+<h2>6.4. Weather<a class="headerlink" href="#weather" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="33%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">API</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>temperature</td>
+<td>temperature of the city;</td>
+</tr>
+<tr class="row-odd"><td>weather_type</td>
+<td>weather condition;</td>
+</tr>
+<tr class="row-even"><td>forecast_weather_1d</td>
+<td>weather forecast for tomorrow;</td>
+</tr>
+<tr class="row-odd"><td>forecast_weather_2d</td>
+<td>weather forecast for two day;</td>
+</tr>
+<tr class="row-even"><td>forecast_weather_3d</td>
+<td>weather forecast for three day;</td>
+</tr>
+</tbody>
+</table>
+<p>The devices used to estimate these informations are:</p>
+<ul class="simple">
+<li>Android/iOS</li>
+</ul>
+</div>
+<div class="section" id="traffic">
+<h2>6.5. Traffic<a class="headerlink" href="#traffic" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="33%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">API</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>traffic_status</td>
+<td>traffic status of the streets nearby;</td>
+</tr>
+<tr class="row-odd"><td>forecast_traffic</td>
+<td>forecast of the traffic status</td>
+</tr>
+</tbody>
+</table>
+<p>The devices used to estimate these informations are:</p>
+<ul class="simple">
+<li>Android/iOS</li>
+</ul>
+</div>
+<div class="section" id="fitness">
+<h2>6.6. Fitness<a class="headerlink" href="#fitness" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="33%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">API</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>time_at_fitness</td>
+<td>number of hours of fitness;</td>
+</tr>
+<tr class="row-odd"><td>heart_rate_min</td>
+<td>heart rate at resting state</td>
+</tr>
+</tbody>
+</table>
+<p>The devices used to estimate these informations are:</p>
+<ul class="simple">
+<li>Android/iOS</li>
+<li>Fitbit</li>
+<li>Jawbone Up</li>
+</ul>
+</div>
+<div class="section" id="shopping-habits">
+<h2>6.7. Shopping Habits<a class="headerlink" href="#shopping-habits" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="33%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">API</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>favorite_shop</td>
+<td>the favorite shop of the user</td>
+</tr>
+<tr class="row-odd"><td>time_at_shopping</td>
+<td>time that user do shopping</td>
+</tr>
+<tr class="row-even"><td>shopping_time</td>
+<td>time when user goes to shopping</td>
+</tr>
+</tbody>
+</table>
+<p>The devices used to estimate these informations are:</p>
+<ul class="simple">
+<li>Android/iOS</li>
+<li>Fitbit</li>
+<li>Jawbone Up</li>
+</ul>
+</div>
 </div>
 
 
@@ -267,6 +534,10 @@
       
         <br/>
         
+<div id="sourcelink">
+  <a href="_sources/infoapi.txt"
+     rel="nofollow">Source</a>
+</div>
       
     </p>
     <p>

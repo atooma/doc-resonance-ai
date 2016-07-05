@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 
@@ -7,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Index &mdash; Resonance AI SDK 2.1.0 documentation</title>
+    <title>5. Context API &mdash; Resonance AI SDK 2.1.0 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -33,6 +32,8 @@
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="top" title="Resonance AI SDK 2.1.0 documentation" href="index.html" />
+    <link rel="next" title="6. Info API" href="infoapi.html" />
+    <link rel="prev" title="4.8. Building Own Applications" href="andexamples.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -67,7 +68,7 @@
      href="index.html">Contents <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul>
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="intro.html#what-we-believe">1.1. What We Believe?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="intro.html#what-is-resonance-why-there-is-an-atooma-app-on-the-market">1.2. What Is Resonance - Why There Is An Atooma App On The Market?</a></li>
@@ -194,15 +195,15 @@
 <li class="toctree-l2"><a class="reference internal" href="android.html#changelog">4.11. Changelog</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="contextapi.html">5. Context API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="contextapi.html#basic-api">5.1. Basic API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contextapi.html#vehicle-api">5.2. Vehicle API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contextapi.html#user-places-api">5.3. User Places API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contextapi.html#on-foot-api">5.4. On Foot API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contextapi.html#entertainment-api">5.5. Entertainment API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contextapi.html#health-api">5.6. Health API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contextapi.html#business-api">5.7. Business API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contextapi.html#holidays-api">5.8. Holidays API</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Context API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#basic-api">5.1. Basic API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vehicle-api">5.2. Vehicle API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#user-places-api">5.3. User Places API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#on-foot-api">5.4. On Foot API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#entertainment-api">5.5. Entertainment API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#health-api">5.6. Health API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#business-api">5.7. Business API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#holidays-api">5.8. Holidays API</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="infoapi.html">6. Info API</a><ul>
@@ -243,16 +244,227 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">5. Context API</a><ul>
+<li><a class="reference internal" href="#basic-api">5.1. Basic API</a></li>
+<li><a class="reference internal" href="#vehicle-api">5.2. Vehicle API</a></li>
+<li><a class="reference internal" href="#user-places-api">5.3. User Places API</a></li>
+<li><a class="reference internal" href="#on-foot-api">5.4. On Foot API</a></li>
+<li><a class="reference internal" href="#entertainment-api">5.5. Entertainment API</a></li>
+<li><a class="reference internal" href="#health-api">5.6. Health API</a></li>
+<li><a class="reference internal" href="#business-api">5.7. Business API</a></li>
+<li><a class="reference internal" href="#holidays-api">5.8. Holidays API</a></li>
+</ul>
+</li>
+</ul>
+
         </div>
       </div>
     <div class="col-md-9 content">
       
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="context-api">
+<h1>5. Context API<a class="headerlink" href="#context-api" title="Permalink to this headline">¶</a></h1>
+<p>Context Detection is the core of Resonance AI and it’s based on the idea of determining what user is doing, by combining information coming from different data sources (e.g. Android / iOS devices, wearables, external systems) and processing them through advanced models developed for Google Tensorflow.</p>
+<p>The Context API are organized in eight groups:</p>
+<ul class="simple">
+<li>Basic: this group gives information about the type of the movement of the user;</li>
+<li>Vehicle: this group gives information about the type of in-vehicles movement of the user;</li>
+<li>User Places: this group gives access to user&#8217;s favorite locations;</li>
+<li>On Foot: this group knows if user does certain activities on foot;</li>
+<li>Entertainment: this group gives information about the type of leisure activities;</li>
+<li>Health</li>
+<li>Business</li>
+<li>Holidays</li>
+</ul>
+<div class="section" id="basic-api">
+<h2>5.1. Basic API<a class="headerlink" href="#basic-api" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="33%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">API</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>still</td>
+<td>The user is still in a place.</td>
+</tr>
+<tr class="row-odd"><td>in_vehicle</td>
+<td>The user is moving by some type of vehicle
+(car, bus, train, subway, flight);</td>
+</tr>
+<tr class="row-even"><td>on_foot</td>
+<td>The user is running or walking;</td>
+</tr>
+<tr class="row-odd"><td>biking</td>
+<td>The user is biking</td>
+</tr>
+</tbody>
+</table>
+<p>The devices used to estimate these informations are:</p>
+<ul class="simple">
+<li>Android/iOS</li>
+<li>Fitbit</li>
+<li>Jawbone Up</li>
+</ul>
+</div>
+<div class="section" id="vehicle-api">
+<h2>5.2. Vehicle API<a class="headerlink" href="#vehicle-api" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="33%" />
+<col width="67%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">API</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>car</td>
+<td>The user is driving a car;</td>
+</tr>
+<tr class="row-odd"><td>bus</td>
+<td>The user is moving by bus;</td>
+</tr>
+<tr class="row-even"><td>train</td>
+<td>The user is traveling by train;</td>
+</tr>
+<tr class="row-odd"><td>subway</td>
+<td>The user is traveling by metro;</td>
+</tr>
+<tr class="row-even"><td>flight</td>
+<td>The user is traveling by flight;</td>
+</tr>
+<tr class="row-odd"><td>ferry</td>
+<td>The user is traveling by ferry;</td>
+</tr>
+</tbody>
+</table>
+<p>The devices used to estimate these informations are:</p>
+<ul class="simple">
+<li>Android/iOS</li>
+<li>Fitbit</li>
+<li>Jawbone Up</li>
+<li>Samsung Connect Auto</li>
+</ul>
+</div>
+<div class="section" id="user-places-api">
+<h2>5.3. User Places API<a class="headerlink" href="#user-places-api" title="Permalink to this headline">¶</a></h2>
+<p>This group gives information about the user places; the types implemented are:</p>
+<ul class="simple">
+<li>home</li>
+<li>work</li>
+<li>favorite_restaurant</li>
+<li>favorite_coffee</li>
+<li>favorite_shop</li>
+<li>favorite_gym</li>
+</ul>
+<p>The devices used to estimate these informations are:</p>
+<ul class="simple">
+<li>Android/iOS</li>
+<li>Fitbit</li>
+<li>Jawbone Up</li>
+<li>Nest</li>
+<li>Netatmo Thermostat</li>
+<li>Smartthings</li>
+</ul>
+</div>
+<div class="section" id="on-foot-api">
+<h2>5.4. On Foot API<a class="headerlink" href="#on-foot-api" title="Permalink to this headline">¶</a></h2>
+<p>This category collects context like:</p>
+<ul class="simple">
+<li>walking</li>
+<li>running</li>
+<li>workout</li>
+</ul>
+<p>The devices used to estimate these informations are:</p>
+<ul class="simple">
+<li>Android/iOS</li>
+<li>Fitbit</li>
+<li>Jawbone Up</li>
+</ul>
+</div>
+<div class="section" id="entertainment-api">
+<h2>5.5. Entertainment API<a class="headerlink" href="#entertainment-api" title="Permalink to this headline">¶</a></h2>
+<p>This category collects context like:</p>
+<ul class="simple">
+<li>shopping,</li>
+<li>restaurant,</li>
+<li>fast food,</li>
+<li>cinema,</li>
+<li>theater,</li>
+<li>stadium,</li>
+<li>opera,</li>
+<li>museum,</li>
+<li>aquarium,</li>
+<li>disco,</li>
+<li>pub,</li>
+<li>bar</li>
+</ul>
+<p>The devices used to estimate these informations are:</p>
+<ul class="simple">
+<li>Android/iOS</li>
+<li>Fitbit</li>
+<li>Jawbone Up</li>
+</ul>
+</div>
+<div class="section" id="health-api">
+<h2>5.6. Health API<a class="headerlink" href="#health-api" title="Permalink to this headline">¶</a></h2>
+<p>This category collects context like:</p>
+<ul class="simple">
+<li>sleeping,</li>
+<li>emotional status</li>
+</ul>
+<p>The devices used to estimate these informations are:</p>
+<ul class="simple">
+<li>Android/iOS</li>
+<li>Fitbit</li>
+<li>Jawbone Up</li>
+</ul>
+</div>
+<div class="section" id="business-api">
+<h2>5.7. Business API<a class="headerlink" href="#business-api" title="Permalink to this headline">¶</a></h2>
+<p>This category collects context like:</p>
+<ul class="simple">
+<li>meetings</li>
+<li>business trip</li>
+<li>working</li>
+<li>business lunch</li>
+<li>business dinner</li>
+</ul>
+<p>The devices used to estimate these informations are:</p>
+<ul class="simple">
+<li>Android/iOS</li>
+<li>Fitbit</li>
+<li>Jawbone Up</li>
+<li>Facebook</li>
+<li>Twitter</li>
+<li>LinkedIn</li>
+</ul>
+</div>
+<div class="section" id="holidays-api">
+<h2>5.8. Holidays API<a class="headerlink" href="#holidays-api" title="Permalink to this headline">¶</a></h2>
+<p>This category collects context like:</p>
+<ul class="simple">
+<li>Cultural trips</li>
+<li>Sea</li>
+<li>SPA</li>
+<li>Relax</li>
+</ul>
+<p>The devices used to estimate these informations are:</p>
+<ul class="simple">
+<li>Android/iOS</li>
+<li>Fitbit</li>
+<li>Jawbone Up</li>
+<li>Nest</li>
+<li>Netatmo Thermostat</li>
+<li>Smartthings</li>
+</ul>
+</div>
 </div>
 
 
@@ -267,6 +479,10 @@
       
         <br/>
         
+<div id="sourcelink">
+  <a href="_sources/contextapi.txt"
+     rel="nofollow">Source</a>
+</div>
       
     </p>
     <p>
