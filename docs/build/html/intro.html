@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>1. Introduction &mdash; Resonance AI SDK 2.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.6/spacelab/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/atooma.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="Resonance AI SDK 2.1.0 documentation" href="index.html" />
+    <link rel="next" title="2. Getting Started" href="getstart.html" />
+    <link rel="prev" title="Welcome to Resonance AI documentation!" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          Resonance AI SDK</a>
+        <span class="navbar-text navbar-version pull-left"><b>2.1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Contents <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-we-believe">1.1. What We Believe?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-resonance-why-there-is-an-atooma-app-on-the-market">1.2. What Is Resonance - Why There Is An Atooma App On The Market?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-resonance-sdk">1.3. What Is Resonance SDK?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-you-need">1.4. What You Need?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getstart.html">2. Getting Started</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="introduction">
+<span id="intro"></span><h1>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>This tutorial is intended to get you up and running with the Resonance AI environment. We&#8217;ll walk through from setup to running your own <strong>Resonance-Powered-App</strong>.</p>
+<p><strong>Resonance-Powered-Apps</strong> are Android/iOS/Cloud based applications or devices that allow a user to leverage on the power of connecting multiple devices and apps together, with the final goal to give at final users a contextual experience application: automating recurring tasks and suggesting actions.</p>
+<p>Furthermore sensors, apps and devices are all managed by Resonance as key enabler to new generations of smart devices designed to:</p>
+<ul class="simple">
+<li><strong>Listen</strong> to people’s behavior across apps and devices.</li>
+<li><strong>Analyze</strong> the patterns and get the most out of them.</li>
+<li><strong>Act</strong> accordingly with the desired action in the right moment for a magic experience.</li>
+</ul>
+<div class="section" id="what-we-believe">
+<h2>1.1. What We Believe?<a class="headerlink" href="#what-we-believe" title="Permalink to this headline">¶</a></h2>
+<p>Within 2020 the number of connected devices will be over than 50 Billion.
+From Connected Cars to Smart Homes, from Wearables to Smartphones all things are getting connected and more intelligent everyday.</p>
+<p>Devices are still far from each other - they do not talk - they do not provide cool and useful cross-use-cases to end users. How many of you are using a Smart TV, not only to watch TV programs? How many of you are considering useful a smartwatch device after the first week of adoption?</p>
+<p>As result, end users got lost among different OSs and Devices Capabilities turning their connected and smart experience into a nightmare.
+Resonance bring again the user at the centre of the picture, seamlessly connecting devices around him and providing real context aware and predictive aware features.</p>
+<p>Developers and Companies focused on building IOT devices and/or Apps can rely on a perfect tool to empower their products capabilities and turning them into a real context aware space.</p>
+</div>
+<div class="section" id="what-is-resonance-why-there-is-an-atooma-app-on-the-market">
+<h2>1.2. What Is Resonance - Why There Is An Atooma App On The Market?<a class="headerlink" href="#what-is-resonance-why-there-is-an-atooma-app-on-the-market" title="Permalink to this headline">¶</a></h2>
+<p>Atooma App was born initially as an Android (also on a light-version for iOS) application aimed to allow end users to create and share automation rules following the <em>IF and DO</em> paradigm.</p>
+<p>So, using Atooma App users are able to create rules like: <em>IF I&#8217;m running and I plug the headphone DO Launch the music</em> or <em>IF I&#8217;m driving back to home and my battery level is below 10% DO send an SMS to my wife</em>.</p>
+<p>Today more than 25M of rules have been created and shared among our community and hundreds of apps and devices features are controlled by the Resonance Rule Engine.</p>
+<p>Building our own App and product has been a perfect strategy to understand what people love to automate in their life. What they are looking to turn smart into their devices or apps and why they found even hard to use a toolkit like our consumer App.</p>
+</div>
+<div class="section" id="what-is-resonance-sdk">
+<h2>1.3. What Is Resonance SDK?<a class="headerlink" href="#what-is-resonance-sdk" title="Permalink to this headline">¶</a></h2>
+<p>Such enormous validation convinced our team to extend such contextual capabilities not only to the end user’s hands but directly towards device vendors and app developers team.</p>
+<p>Imagine to be able to connect your temperature sensor to our engine and being able to enable contextual experiences on your Smart Home App like: <em>Every Time the temperature threshold is below a certain level and I&#8217;m out of home, activate the air conditioning and store the electrical consumptions info into a Drive Doc</em>. Well, using the Resonance SDK, you can do it in a matter of seconds!</p>
+<p>We estimated every developer can save up to <em>60%</em> of coding lines to build context aware use cases by relying on our tools.</p>
+<p>We do provide to third party developers a full standalone Platform to collect and to analyze data from a lot of devices and to create intelligence contextual automation with a set of embedded modules to start immediately to build automation use cases just by matching basic lines of LUA scripts using a web console.
+On top of it developers have the opportunity to create their own sensors modules and plug them with our Resonance Cloud platform and leverage on real time prediction based rule suggestions.</p>
+<p>We do provide external developers a set of APIs which leverage on the fact that Resonance is able to collect user&#8217;s behaviors information among hundreds of sensors and apps with the final result to be able to to let your App be aware of what the user is going to do. Imagine to have an API able to let you know if the user is driving back home from work or just simply to understand if the user is in a Bus rather than a Car.
+Having such contextual information then you&#8217;ll be able to proceed by coding a specific reaction on your own app or eventually leverage on the Resonance Rule Engine to be able to trigger an automation rule based on such context prediction.</p>
+</div>
+<div class="section" id="what-you-need">
+<span id="intro-needs"></span><h2>1.4. What You Need?<a class="headerlink" href="#what-you-need" title="Permalink to this headline">¶</a></h2>
+<p>Using our Platform is super simple: sign-in to <a class="reference external" href="https://console.resonance-ai.com">https://console.resonance-ai.com</a> and start to build your contextual application.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="_sources/intro.txt"
+     rel="nofollow">Source</a>
+</div>
+      
+    </p>
+    <p>
+        &copy; Copyright 2016, Atooma Inc.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.4.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

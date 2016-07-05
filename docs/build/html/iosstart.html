@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>3. Resonance iOS SDK framework &mdash; Resonance AI SDK 2.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.6/spacelab/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/atooma.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="Resonance AI SDK 2.1.0 documentation" href="index.html" />
+    <link rel="prev" title="2. Getting Started" href="getstart.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          Resonance AI SDK</a>
+        <span class="navbar-text navbar-version pull-left"><b>2.1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Contents <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-we-believe">1.1. What We Believe?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-is-resonance-why-there-is-an-atooma-app-on-the-market">1.2. What Is Resonance - Why There Is An Atooma App On The Market?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-is-resonance-sdk">1.3. What Is Resonance SDK?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-you-need">1.4. What You Need?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getstart.html">2. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getstart.html#declaring-features-of-interest">2.1. Declaring Features of Interest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getstart.html#data-sources-definition">2.2. Data Sources Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getstart.html#rule-engine-configuration">2.3. Rule Engine Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Resonance iOS SDK framework</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#add-the-sdk-to-your-xcode-project">3.1. Add the SDK to your Xcode Project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#configure-the-app-capabilities">3.1.1. Configure the app capabilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-the-location-service-permission-string">3.1.2. Set the Location Service permission string</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#objective-c">3.1.3. Objective-C</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#all-set">3.1.4. All set!</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#data-collector">3.2. Data Collector</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#configure-the-collector">3.2.1. Configure the collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ask-for-permission">3.2.2. Ask for Permission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#start-the-collector">3.2.3. Start the collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stop-the-collector">3.2.4. Stop the collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#logger">3.2.5. Logger</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#activity-tracking">3.3. Activity Tracking</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#history">3.3.1. History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#realtime-event-monitoring-beta">3.3.2. Realtime Event Monitoring (Beta)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">3. Resonance iOS SDK framework</a><ul>
+<li><a class="reference internal" href="#add-the-sdk-to-your-xcode-project">3.1. Add the SDK to your Xcode Project</a><ul>
+<li><a class="reference internal" href="#configure-the-app-capabilities">3.1.1. Configure the app capabilities</a></li>
+<li><a class="reference internal" href="#set-the-location-service-permission-string">3.1.2. Set the Location Service permission string</a></li>
+<li><a class="reference internal" href="#objective-c">3.1.3. Objective-C</a></li>
+<li><a class="reference internal" href="#all-set">3.1.4. All set!</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data-collector">3.2. Data Collector</a><ul>
+<li><a class="reference internal" href="#configure-the-collector">3.2.1. Configure the collector</a></li>
+<li><a class="reference internal" href="#ask-for-permission">3.2.2. Ask for Permission</a></li>
+<li><a class="reference internal" href="#start-the-collector">3.2.3. Start the collector</a></li>
+<li><a class="reference internal" href="#stop-the-collector">3.2.4. Stop the collector</a></li>
+<li><a class="reference internal" href="#logger">3.2.5. Logger</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#activity-tracking">3.3. Activity Tracking</a><ul>
+<li><a class="reference internal" href="#history">3.3.1. History</a></li>
+<li><a class="reference internal" href="#realtime-event-monitoring-beta">3.3.2. Realtime Event Monitoring (Beta)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="resonance-ios-sdk-framework">
+<span id="iosstart"></span><h1>3. Resonance iOS SDK framework<a class="headerlink" href="#resonance-ios-sdk-framework" title="Permalink to this headline">¶</a></h1>
+<p>This part of documentation is intended to get you up and running with the Resonance iOS SDK framework.
+We’ll walk through from setup to running your own Resonance-Powered-App.</p>
+<div class="section" id="add-the-sdk-to-your-xcode-project">
+<h2>3.1. Add the SDK to your Xcode Project<a class="headerlink" href="#add-the-sdk-to-your-xcode-project" title="Permalink to this headline">¶</a></h2>
+<p>To add the SDK in Xcode:
+* Drag the ResonanceSDK.framework and SQLite.framework to Frameworks in Project Navigator. Create a new group Frameworks if it does not exist.
+* Choose “Create groups for any added folders”.
+* Select “Copy items into destination group&#8217;s folder” so you’ll keep the framework directly in your project and repository.
+* Be sure to add both frameworks in the Embedded Binaries section of Xcode. You can find the section in the your target General tab. View Screenshot for reference</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/ios1.png"><img alt="Add the SDK to your Xcode Project" src="_images/ios1.png" style="width: 600px;" /></a>
+</div>
+<div class="section" id="configure-the-app-capabilities">
+<h3>3.1.1. Configure the app capabilities<a class="headerlink" href="#configure-the-app-capabilities" title="Permalink to this headline">¶</a></h3>
+<p>In order to collect data, our SDK needs to work in background. To work in background, your application needs to ask to work in background for Location Updates and Background fetch. We user Location updates for track the user activities even when the app is in background and background fetch to send and synchronize the data collected with our servers.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/ios2.png"><img alt="Add the SDK to your Xcode Project" src="_images/ios2.png" style="width: 600px;" /></a>
+</div>
+</div>
+<div class="section" id="set-the-location-service-permission-string">
+<h3>3.1.2. Set the Location Service permission string<a class="headerlink" href="#set-the-location-service-permission-string" title="Permalink to this headline">¶</a></h3>
+<p>Since iOS 8 developers have to be more specific about the real usage of the location services. To do so you have to add the key “NSLocationAlwaysUsageDescription” to your app Info.plist file with the corresponding explanation for the user. This text will automatically appear on the permission request pop-up.</p>
+</div>
+<div class="section" id="objective-c">
+<h3>3.1.3. Objective-C<a class="headerlink" href="#objective-c" title="Permalink to this headline">¶</a></h3>
+<p>Since the Resonance SDK for iOS is built with Swift, just remember to set “Embedded Content contains swift code” to YES in Project -&gt; Build Settings -&gt; Build Options.</p>
+</div>
+<div class="section" id="all-set">
+<h3>3.1.4. All set!<a class="headerlink" href="#all-set" title="Permalink to this headline">¶</a></h3>
+<p>Ok, everything is setup correctly now. Let’s go deep to the Data Collector.</p>
+</div>
+</div>
+<div class="section" id="data-collector">
+<h2>3.2. Data Collector<a class="headerlink" href="#data-collector" title="Permalink to this headline">¶</a></h2>
+<p>When starting DataCollector instance, ResonanceSDK automatically starts collecting data concerning device usage and user activities. Data are periodically delivered to server with adequate strategy for minimizing battery consumption, and allow to perform analysis on user behavior, determining relevant information about his preferences. This is essential for making predictions as well as for identifying changes in his regular behavioral pattern.</p>
+<p>We advice you to user the BackgroundFetch feature, since it’s able to provide a great balance between fresh data and battery consumption.</p>
+<div class="section" id="configure-the-collector">
+<h3>3.2.1. Configure the collector<a class="headerlink" href="#configure-the-collector" title="Permalink to this headline">¶</a></h3>
+<p>In the application:didFinishLaunchingWithOptions: of your application delegate method just insert the following statement on top:</p>
+<div class="highlight-swift"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">DataCollector</span><span class="p">.</span><span class="n">configure</span><span class="p">()</span>
+<span class="n">DataCollector</span><span class="p">.</span><span class="n">sendDataToAtoomaServer</span> <span class="p">{</span> <span class="n">success</span> <span class="k">in</span>
+<span class="k">if</span> <span class="n">success</span> <span class="p">{</span>
+               <span class="n">NSLog</span><span class="p">(</span><span class="s">&quot;Data synchronized with Atooma server on app startup&quot;</span><span class="p">)</span>
+           <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>It’s mandatory since start all the observers and listeners needed and then start a synchronization with the Atooma Servers as soon as the app is running.</p>
+<p>In the application:performFetchWithCompletionHandler: of your application delegate method just insert the following statement on top:</p>
+<div class="highlight-swift"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">DataCollector</span><span class="p">.</span><span class="n">sendDataToAtoomaServer</span><span class="p">({</span> <span class="kc">_</span> <span class="k">in</span>
+  <span class="n">completionHandler</span><span class="p">(</span><span class="n">UIBackgroundFetchResult</span><span class="p">.</span><span class="n">NewData</span><span class="p">);</span>
+<span class="p">})</span>
+</pre></div>
+</td></tr></table></div>
+<p>It’s mandatory since this method will send data in background taking advantage of the BackgroundFetch iOS7+ feature. Alternatively you can invoke the sendDataToAtoomaServer method when you have the opportunity. Remember to not abuse of this service, since we’re continuously monitoring the server load.</p>
+</div>
+<div class="section" id="ask-for-permission">
+<h3>3.2.2. Ask for Permission<a class="headerlink" href="#ask-for-permission" title="Permalink to this headline">¶</a></h3>
+<p>We recommend you to ask for the permission in a gentle and very polite way at the appropriate time, but always before starting the collector. This is the easy command:</p>
+<div class="highlight-swift"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="n">DataCollector</span><span class="p">.</span><span class="n">acquireUserAuthorizationIfNeeded</span><span class="p">()</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="start-the-collector">
+<h3>3.2.3. Start the collector<a class="headerlink" href="#start-the-collector" title="Permalink to this headline">¶</a></h3>
+<p>Remember to start the DataCollector with this simple command:</p>
+<div class="highlight-swift"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">DataCollector</span><span class="p">.</span><span class="n">start</span><span class="p">()</span>
+</pre></div>
+</td></tr></table></div>
+<p>In addition to start the collector, this method is also responsible to ask all the appropriate permission to the user, only when needed and if you didn’t.</p>
+</div>
+<div class="section" id="stop-the-collector">
+<h3>3.2.4. Stop the collector<a class="headerlink" href="#stop-the-collector" title="Permalink to this headline">¶</a></h3>
+<p>You can also stop the DataCollector when you don’t need it. (i.e. when you logout the user)</p>
+<div class="highlight-swift"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">DataCollector</span><span class="p">.</span><span class="n">stop</span><span class="p">()</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="logger">
+<h3>3.2.5. Logger<a class="headerlink" href="#logger" title="Permalink to this headline">¶</a></h3>
+<p>The Resonance SDK for iOS comes with a convenient Logger with configurable Log Level.</p>
+<p>The default level is Info, but you can set it with one of the following LogLevel:</p>
+<div class="highlight-swift"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">Logger</span><span class="p">.</span><span class="n">globalLevel</span> <span class="p">=</span> <span class="n">LogLevel</span><span class="p">.</span><span class="n">Info</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="activity-tracking">
+<h2>3.3. Activity Tracking<a class="headerlink" href="#activity-tracking" title="Permalink to this headline">¶</a></h2>
+<p>Resonance SDK for iOS comes with an advanced Activity Tracking feature compared to the original CoreMotion.</p>
+<p>You can take advantage of both filtered activities history and a Realtime (beta) Event monitoring.</p>
+<div class="section" id="history">
+<h3>3.3.1. History<a class="headerlink" href="#history" title="Permalink to this headline">¶</a></h3>
+<p>DataCollector exposes a method called fetchActivityList that return asyncronously an array of activity filtered and enriched by location data (if available).</p>
+<p>The method accept 2 parameters for filtering and one completion block which is executed when the computation is completed:
+* fromDate: Start date for the query
+* toDate: End date for the query
+* completionHandler: the completion block contain the Activity array</p>
+<p>An example:</p>
+<div class="highlight-swift"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nv">fromDate</span> <span class="p">=</span>  <span class="n">yesterday</span>
+<span class="kd">let</span> <span class="nv">toDate</span> <span class="p">=</span>    <span class="n">today</span>
+
+<span class="n">DataCollector</span><span class="p">.</span><span class="n">fetchActivityList</span><span class="p">(</span><span class="n">fromDate</span><span class="p">:</span> <span class="n">fromDate</span><span class="p">,</span> <span class="n">toDate</span><span class="p">:</span> <span class="n">toDate</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">activityList</span><span class="p">)</span> <span class="k">in</span>
+  <span class="kc">self</span><span class="p">.</span><span class="n">dataSource</span> <span class="p">=</span> <span class="n">activityList</span>
+  <span class="kc">self</span><span class="p">.</span><span class="n">historyTableView</span><span class="p">.</span><span class="n">reloadData</span><span class="p">()</span>
+  <span class="n">completionHandler</span><span class="p">()</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="realtime-event-monitoring-beta">
+<h3>3.3.2. Realtime Event Monitoring (Beta)<a class="headerlink" href="#realtime-event-monitoring-beta" title="Permalink to this headline">¶</a></h3>
+<p>Activity tracker allows to listen for updates on user activity, with possibility of effectively monitoring transitions as well as duration of tasks.</p>
+<p>Below is reported the list of possible events that library is currently able to handle.</p>
+<ul class="simple">
+<li>Walking</li>
+<li>Running</li>
+<li>Biking</li>
+<li>Driving</li>
+<li>Still</li>
+</ul>
+<p>The Realtime Event Monitoring is still a beta release but we are willing to let you try it out.
+It implements the delegate pattern, so your class designated to consume the activity changes data should conform to the DataCollectorDelegate protocol.</p>
+<p>The protocol has 3 simple optional methods:</p>
+<ul class="simple">
+<li>didUpdatePedometerCounter(UInt) is called when the pedometer counter change</li>
+<li>didChangeActivity(ResonanceSDK.Activity) is called when the user change activity type</li>
+<li>didEncounterAuthorizationError(NSError) is called when something went wrong with the CoreMotion authorization.</li>
+</ul>
+<p>Please refer to the reference documentation for any further information.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="_sources/iosstart.txt"
+     rel="nofollow">Source</a>
+</div>
+      
+    </p>
+    <p>
+        &copy; Copyright 2016, Atooma Inc.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.4.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
