@@ -1,0 +1,822 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Dropbox &mdash; Resonance AI SDK 2.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/spacelab/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/atooma.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="Resonance AI SDK 2.1.0 documentation" href="../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Resonance AI SDK</a>
+        <span class="navbar-text navbar-version pull-left"><b>2.1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Contents <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">1. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#what-we-believe">1.1. What We Believe?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#what-is-resonance-why-there-is-an-atooma-app-on-the-market">1.2. What Is Resonance - Why There Is An Atooma App On The Market?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#what-is-resonance-sdk">1.3. What Is Resonance SDK?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#what-you-need">1.4. What You Need?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getstart.html">2. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getstart.html#declaring-features-of-interest">2.1. Declaring Features of Interest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getstart.html#data-sources-definition">2.2. Data Sources Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getstart.html#rule-engine-configuration">2.3. Rule Engine Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../iosstart.html">3. Resonance iOS SDK framework</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../iosstart.html#add-the-sdk-to-your-xcode-project">3.1. Add the SDK to your Xcode Project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../iosstart.html#configure-the-app-capabilities">3.1.1. Configure the app capabilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../iosstart.html#set-the-location-service-permission-string">3.1.2. Set the Location Service permission string</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../iosstart.html#objective-c">3.1.3. Objective-C</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../iosstart.html#all-set">3.1.4. All set!</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../iosstart.html#data-collector">3.2. Data Collector</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../iosstart.html#configure-the-collector">3.2.1. Configure the collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../iosstart.html#ask-for-permission">3.2.2. Ask for Permission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../iosstart.html#start-the-collector">3.2.3. Start the collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../iosstart.html#stop-the-collector">3.2.4. Stop the collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../iosstart.html#logger">3.2.5. Logger</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../iosstart.html#activity-tracking">3.3. Activity Tracking</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../iosstart.html#history">3.3.1. History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../iosstart.html#realtime-event-monitoring-beta">3.3.2. Realtime Event Monitoring (Beta)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../android.html">4. Resonance Android SDK framework</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../andactivity.html">4.1. Activity Tracking</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../andactivity.html#theoretical-basis">4.1.1. Theoretical Basis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andactivity.html#monitoring-events">4.1.2. Monitoring Events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andactivity.html#accessing-activity-history">4.1.3. Accessing activity history</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andactivity.html#sub-activities">4.1.4. Sub Activities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andactivity.html#next-steps">4.1.5. Next Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andactivity.html#bibliography">4.1.6. Bibliography</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../android.html#stable-gradle-configuration">4.2. Stable Gradle Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../android.html#basic-manifest-configuration">4.3. Basic Manifest Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../android.html#changelog">4.4. Changelog</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Dropbox</a><ul>
+<li><a class="reference internal" href="#value-types">Value Types</a></li>
+<li><a class="reference internal" href="#trigger-directory-created">Trigger Directory Created</a></li>
+<li><a class="reference internal" href="#trigger-directory-deleted">Trigger Directory Deleted</a></li>
+<li><a class="reference internal" href="#trigger-file-added">Trigger File Added</a></li>
+<li><a class="reference internal" href="#trigger-file-deleted">Trigger File Deleted</a></li>
+<li><a class="reference internal" href="#trigger-media-uploaded">Trigger Media Uploaded</a></li>
+<li><a class="reference internal" href="#trigger-space-used">Trigger Space Used</a></li>
+<li><a class="reference internal" href="#performer-create-directory">Performer Create Directory</a></li>
+<li><a class="reference internal" href="#performer-delete-directory">Performer Delete Directory</a></li>
+<li><a class="reference internal" href="#performer-add-file">Performer Add File</a></li>
+<li><a class="reference internal" href="#performer-delete-file">Performer Delete File</a></li>
+<li><a class="reference internal" href="#performer-share-file">Performer Share File</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="dropbox">
+<span id="module-dropbox"></span><h1>Dropbox<a class="headerlink" href="#dropbox" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><strong>Identifier</strong> - DROPBOX</li>
+<li><strong>Description</strong> - Implements integration with Dropbox.</li>
+<li><strong>Initialization</strong> - Check availability of Dropbox App Key and App Secret as meta-data. Set up Dropbox AuthActivity in Manifest file in order for the client application to interact with Dropbox API.</li>
+<li><strong>Destroy</strong> - None</li>
+<li><strong>Dependencies</strong> - <a class="reference internal" href="core.html#module-core"><span class="std std-ref">Core</span></a></li>
+</ul>
+<div class="section" id="value-types">
+<h2>Value Types<a class="headerlink" href="#value-types" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="13%" />
+<col width="48%" />
+<col width="14%" />
+<col width="24%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Description</th>
+<th class="head">From Version</th>
+<th class="head">Wrapper Class</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>URI</strong></td>
+<td>Represents a Dropbox Relative Uri.</td>
+<td>1</td>
+<td>VT_Dropbox_Uri_Wrapper</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="trigger-directory-created">
+<h2>Trigger Directory Created<a class="headerlink" href="#trigger-directory-created" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="15%" />
+<col width="23%" />
+<col width="17%" />
+<col width="13%" />
+<col width="32%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Name</td>
+<td colspan="4">DIR-CREATED</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td colspan="4">Executes when a new directory is created by the Dropbox user.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="15%" />
+<col width="23%" />
+<col width="17%" />
+<col width="13%" />
+<col width="32%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&nbsp;</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Required</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="2">Parameters</td>
+<td>DROPBOX.URI</td>
+<td>DIR-PATH</td>
+<td>No</td>
+<td>Filter criteria for path
+of the folder created.</td>
+</tr>
+<tr class="row-odd"><td>CORE.STRING</td>
+<td>DIR-NAME</td>
+<td>No</td>
+<td>Filter criteria for name
+of the folder created.</td>
+</tr>
+<tr class="row-even"><td>Variables</td>
+<td>DROPBOX.URI</td>
+<td colspan="2">DIR-NAME</td>
+<td>Directory name.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="trigger-directory-deleted">
+<h2>Trigger Directory Deleted<a class="headerlink" href="#trigger-directory-deleted" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="15%" />
+<col width="23%" />
+<col width="17%" />
+<col width="13%" />
+<col width="32%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Name</td>
+<td colspan="4">DIR-CREATED</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td colspan="4">Executes when a directory is deleted by the Dropbox user.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="15%" />
+<col width="23%" />
+<col width="17%" />
+<col width="13%" />
+<col width="32%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&nbsp;</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Required</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="2">Parameters</td>
+<td>DROPBOX.URI</td>
+<td>DIR-PATH</td>
+<td>No</td>
+<td>Filter criteria for path
+of the folder deleted.</td>
+</tr>
+<tr class="row-odd"><td>CORE.STRING</td>
+<td>DIR-NAME</td>
+<td>No</td>
+<td>Filter criteria for name
+of the folder deleted.</td>
+</tr>
+<tr class="row-even"><td>Variables</td>
+<td>DROPBOX.URI</td>
+<td colspan="2">DIR-NAME</td>
+<td>Directory name.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="trigger-file-added">
+<h2>Trigger File Added<a class="headerlink" href="#trigger-file-added" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="15%" />
+<col width="23%" />
+<col width="17%" />
+<col width="13%" />
+<col width="32%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Name</td>
+<td colspan="4">FILE-ADDED</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td colspan="4">Executes when a file is added by the Dropbox user.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="15%" />
+<col width="23%" />
+<col width="17%" />
+<col width="13%" />
+<col width="32%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&nbsp;</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Required</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="2">Parameters</td>
+<td>DROPBOX.URI</td>
+<td>FILE-PATH</td>
+<td>No</td>
+<td>Filter criteria for path
+of the file added.</td>
+</tr>
+<tr class="row-odd"><td>CORE.STRING</td>
+<td>FILE-NAME</td>
+<td>No</td>
+<td>Filter criteria for name
+of the file added.</td>
+</tr>
+<tr class="row-even"><td>Variables</td>
+<td>DROPBOX.URI</td>
+<td colspan="2">FILE-PATH</td>
+<td>File path.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="trigger-file-deleted">
+<h2>Trigger File Deleted<a class="headerlink" href="#trigger-file-deleted" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="15%" />
+<col width="23%" />
+<col width="17%" />
+<col width="13%" />
+<col width="32%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Name</td>
+<td colspan="4">FILE-DELETED</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td colspan="4">Executes when a file is deleted by the Dropbox user.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="15%" />
+<col width="23%" />
+<col width="17%" />
+<col width="13%" />
+<col width="32%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&nbsp;</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Required</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="2">Parameters</td>
+<td>DROPBOX.URI</td>
+<td>FILE-PATH</td>
+<td>No</td>
+<td>Filter criteria for path
+of the file deleted.</td>
+</tr>
+<tr class="row-odd"><td>CORE.STRING</td>
+<td>FILE-NAME</td>
+<td>No</td>
+<td>Filter criteria for name
+of the file deleted.</td>
+</tr>
+<tr class="row-even"><td>Variables</td>
+<td>DROPBOX.URI</td>
+<td colspan="2">FILE-PATH</td>
+<td>File path.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="trigger-media-uploaded">
+<h2>Trigger Media Uploaded<a class="headerlink" href="#trigger-media-uploaded" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="15%" />
+<col width="23%" />
+<col width="17%" />
+<col width="13%" />
+<col width="32%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Name</td>
+<td colspan="4">MEDIA-UPLOADED</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td colspan="4">Executes when a media file is uploaded by the Dropbox user.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="15%" />
+<col width="23%" />
+<col width="17%" />
+<col width="13%" />
+<col width="32%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&nbsp;</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Required</th>
+<th class="head">Description cc</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="2">Parameters</td>
+<td>DROPBOX.URI</td>
+<td>FILE-PATH</td>
+<td>No</td>
+<td>Filter criteria for path
+of the media uploaded.</td>
+</tr>
+<tr class="row-odd"><td>CORE.STRING</td>
+<td>FILE-NAME</td>
+<td>No</td>
+<td>Filter criteria for name
+of the media uploaded.</td>
+</tr>
+<tr class="row-even"><td>Variables</td>
+<td>DROPBOX.URI</td>
+<td colspan="2">DIR-TO</td>
+<td>Media File path.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="trigger-space-used">
+<h2>Trigger Space Used<a class="headerlink" href="#trigger-space-used" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="15%" />
+<col width="23%" />
+<col width="17%" />
+<col width="13%" />
+<col width="32%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Name</td>
+<td colspan="4">SPACE-USED</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td colspan="4">Executes when the used space in Dropbox is equal/greater/lesser than a
+predefined percentage value passed as a parameter.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="15%" />
+<col width="23%" />
+<col width="17%" />
+<col width="13%" />
+<col width="32%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&nbsp;</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Required</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Parameters</td>
+<td>CORE.PERCENT-FILTER</td>
+<td>PERCENT</td>
+<td>Yes</td>
+<td>Filter criteria for
+used space.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="performer-create-directory">
+<h2>Performer Create Directory<a class="headerlink" href="#performer-create-directory" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="15%" />
+<col width="23%" />
+<col width="17%" />
+<col width="13%" />
+<col width="32%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Name</td>
+<td colspan="4">DIR-CREATE</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td colspan="4">Creates a new directory in Dropbox.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="15%" />
+<col width="23%" />
+<col width="17%" />
+<col width="13%" />
+<col width="32%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&nbsp;</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Required</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="2">Parameters</td>
+<td>DROPBOX.URI</td>
+<td>DIR-PATH</td>
+<td>No</td>
+<td>Dropbox relative path of
+the directory to be created.</td>
+</tr>
+<tr class="row-odd"><td>CORE.STRING</td>
+<td>DIR-NAME</td>
+<td>Yes</td>
+<td>Name of the directory to be
+created.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="performer-delete-directory">
+<h2>Performer Delete Directory<a class="headerlink" href="#performer-delete-directory" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="15%" />
+<col width="23%" />
+<col width="17%" />
+<col width="13%" />
+<col width="32%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Name</td>
+<td colspan="4">DIR-DELETE</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td colspan="4">Deletes an existing directory in Dropbox.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="15%" />
+<col width="23%" />
+<col width="17%" />
+<col width="13%" />
+<col width="32%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&nbsp;</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Required</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="2">Parameters</td>
+<td>DROPBOX.URI</td>
+<td>DIR-PATH</td>
+<td>No</td>
+<td>Dropbox relative path of
+the directory to be deleted.</td>
+</tr>
+<tr class="row-odd"><td>CORE.STRING</td>
+<td>DIR-NAME</td>
+<td>Yes</td>
+<td>Name of the directory to be
+deleted.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="performer-add-file">
+<h2>Performer Add File<a class="headerlink" href="#performer-add-file" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="15%" />
+<col width="23%" />
+<col width="17%" />
+<col width="13%" />
+<col width="32%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Name</td>
+<td colspan="4">FILE-ADD</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td colspan="4">Adds a new file in Dropbox.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="15%" />
+<col width="23%" />
+<col width="17%" />
+<col width="13%" />
+<col width="32%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&nbsp;</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Required</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="2">Parameters</td>
+<td>DROPBOX.URI</td>
+<td>FILE-PATH</td>
+<td>No</td>
+<td>Dropbox relative path of
+the file to be added.</td>
+</tr>
+<tr class="row-odd"><td>CORE.URI</td>
+<td>FILE</td>
+<td>Yes</td>
+<td>Uri of the file to be added.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="performer-delete-file">
+<h2>Performer Delete File<a class="headerlink" href="#performer-delete-file" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="15%" />
+<col width="23%" />
+<col width="17%" />
+<col width="13%" />
+<col width="32%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Name</td>
+<td colspan="4">FILE-DELETE</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td colspan="4">Deletes an existing file in Dropbox.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="15%" />
+<col width="23%" />
+<col width="17%" />
+<col width="13%" />
+<col width="32%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&nbsp;</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Required</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Parameters</td>
+<td>DROPBOX.URI</td>
+<td>DIR-PATH</td>
+<td>Yes</td>
+<td>Dropbox relative Uri of the
+file to be deleted.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="performer-share-file">
+<h2>Performer Share File<a class="headerlink" href="#performer-share-file" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="15%" />
+<col width="23%" />
+<col width="17%" />
+<col width="13%" />
+<col width="32%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Name</td>
+<td colspan="4">FILE-SHARE</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td colspan="4">Shares an existing file in Dropbox.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="15%" />
+<col width="23%" />
+<col width="17%" />
+<col width="13%" />
+<col width="32%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&nbsp;</th>
+<th class="head">Type</th>
+<th class="head">Name</th>
+<th class="head">Required</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td rowspan="2">Parameters</td>
+<td>DROPBOX.URI</td>
+<td>FILE-PATH</td>
+<td>No</td>
+<td>Dropbox relative path of
+the file to be shared.</td>
+</tr>
+<tr class="row-odd"><td>CORE.STRING</td>
+<td>FILE-NAME</td>
+<td>Yes</td>
+<td>Name of the file to be
+shared</td>
+</tr>
+<tr class="row-even"><td>Variables</td>
+<td>CORE.LINK</td>
+<td colspan="2">LINK</td>
+<td>File link.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="../_sources/modules/dropbox.txt"
+     rel="nofollow">Source</a>
+</div>
+      
+    </p>
+    <p>
+        &copy; Copyright 2016, Atooma Inc.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.4.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

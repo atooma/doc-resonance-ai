@@ -1,0 +1,579 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>4.6. Activity Tracking &mdash; Resonance AI SDK 2.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.6/spacelab/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/atooma.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="Resonance AI SDK 2.1.0 documentation" href="index.html" />
+    <link rel="up" title="4. Resonance Android SDK framework" href="android.html" />
+    <link rel="next" title="4.7. Resonance API Client" href="andresonance.html" />
+    <link rel="prev" title="4.5. Modules API Reference" href="andreference.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          Resonance AI SDK</a>
+        <span class="navbar-text navbar-version pull-left"><b>2.1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Contents <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-we-believe">1.1. What We Believe?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-is-resonance-why-there-is-an-atooma-app-on-the-market">1.2. What Is Resonance - Why There Is An Atooma App On The Market?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-is-resonance-sdk">1.3. What Is Resonance SDK?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-you-need">1.4. What You Need?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getstart.html">2. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getstart.html#declaring-features-of-interest">2.1. Declaring Features of Interest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getstart.html#data-sources-definition">2.2. Data Sources Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getstart.html#rule-engine-configuration">2.3. Rule Engine Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="iosstart.html">3. Resonance iOS SDK framework</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="iosstart.html#add-the-sdk-to-your-xcode-project">3.1. Add the SDK to your Xcode Project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#configure-the-app-capabilities">3.1.1. Configure the app capabilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#set-the-location-service-permission-string">3.1.2. Set the Location Service permission string</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#objective-c">3.1.3. Objective-C</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#all-set">3.1.4. All set!</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iosstart.html#data-collector">3.2. Data Collector</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#configure-the-collector">3.2.1. Configure the collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#ask-for-permission">3.2.2. Ask for Permission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#start-the-collector">3.2.3. Start the collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#stop-the-collector">3.2.4. Stop the collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#logger">3.2.5. Logger</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iosstart.html#activity-tracking">3.3. Activity Tracking</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#history">3.3.1. History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#realtime-event-monitoring-beta">3.3.2. Realtime Event Monitoring (Beta)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="android.html">4. Resonance Android SDK framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="andcore.html">4.1. Core Concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andcore.html#modules">4.1.1. Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andcore.html#rules">4.1.2. Rules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andcore.html#data-analysis">4.1.3. Data Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="andengine.html">4.2. Rules Engine</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andengine.html#the-ruledefinition-class">4.2.1. The <em>RuleDefinition</em> Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andengine.html#the-atooma-class">4.2.2. The <em>Atooma</em> Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andengine.html#the-ruleconflictschecker-class">4.2.3. The <em>RuleConflictsChecker</em> Class</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="andxml.html">4.3. Defining Rules With XML</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andxml.html#property-values">4.3.1. Property Values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andxml.html#external-provider-calls">4.3.2. External Provider Calls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andxml.html#example">4.3.3. Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andxml.html#atooma-binary-format">4.3.4. Atooma binary format</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="andprogramming.html">4.4. Developing Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andprogramming.html#creating-modules">4.4.1. Creating Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andprogramming.html#creating-value-types">4.4.2. Creating Value Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andprogramming.html#creating-triggers">4.4.3. Creating Triggers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andprogramming.html#creating-condition-checkers">4.4.4. Creating Condition Checkers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andprogramming.html#trigger-and-condition-checker-affinity">4.4.5. Trigger and Condition Checker Affinity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andprogramming.html#creating-performers">4.4.6. Creating Performers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="andreference.html">4.5. Modules API Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#oauth-based-modules">4.5.1. OAuth Based Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#activity-manager">4.5.2. Activity Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#airplane">4.5.3. Airplane</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#alarm">4.5.4. Alarm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#battery">4.5.5. Battery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#bluetooth">4.5.6. Bluetooth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#camera">4.5.7. Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#contacts">4.5.8. Contacts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#core">4.5.9. Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#data-sync">4.5.10. Data Sync</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#module-dropbox">4.5.11. Dropbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#facebook">4.5.12. Facebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#google-calendar">4.5.13. Google Calendar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#google-drive">4.5.14. Google Drive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#gmail">4.5.15. Gmail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#headphone">4.5.16. Headphone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#module-instagram">4.5.17. Instagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#location">4.5.18. Location</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#notification">4.5.19. Notification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#shake">4.5.20. Shake</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#sms">4.5.21. SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#telephony">4.5.22. Telephony</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#text-to-speech">4.5.23. Text To Speech</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#module-twitter">4.5.24. Twitter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#wifi">4.5.25. WiFi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#weather">4.5.26. Weather</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.6. Activity Tracking</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#theoretical-basis">4.6.1. Theoretical Basis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#monitoring-events">4.6.2. Monitoring Events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#accessing-activity-history">4.6.3. Accessing activity history</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sub-activities">4.6.4. Sub Activities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#next-steps">4.6.5. Next Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bibliography">4.6.6. Bibliography</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="andresonance.html">4.7. Resonance API Client</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andresonance.html#theoretical-basis">4.7.1. Theoretical Basis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andresonance.html#resonanceapiclient-class">4.7.2. <em>ResonanceApiClient</em> class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andresonance.html#data-collector">4.7.3. Data Collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andresonance.html#advisor">4.7.4. Advisor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andresonance.html#next-steps">4.7.5. Next Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andresonance.html#bibliography">4.7.6. Bibliography</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="andexamples.html">4.8. Building Own Applications</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andexamples.html#example-0-rule-engine-basics">4.8.1. Example 0 - Rule Engine Basics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andexamples.html#example-1-external-providers">4.8.2. Example 1 - External Providers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andexamples.html#example-2-custom-modules">4.8.3. Example 2 - Custom Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andexamples.html#example-3-xml-as-a-template">4.8.4. Example 3 - XML As A Template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andexamples.html#example-4-parking-reminder">4.8.5. Example 4 - Parking Reminder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andexamples.html#example-5-timeline">4.8.6. Example 5 - Timeline</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="android.html#stable-gradle-configuration">4.9. Stable Gradle Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android.html#basic-manifest-configuration">4.10. Basic Manifest Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android.html#changelog">4.11. Changelog</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">4.6. Activity Tracking</a><ul>
+<li><a class="reference internal" href="#theoretical-basis">4.6.1. Theoretical Basis</a></li>
+<li><a class="reference internal" href="#monitoring-events">4.6.2. Monitoring Events</a><ul>
+<li><a class="reference internal" href="#transition-events">4.6.2.1. Transition Events</a></li>
+<li><a class="reference internal" href="#duration-events">4.6.2.2. Duration Events</a></li>
+<li><a class="reference internal" href="#handling-events">4.6.2.3. Handling Events</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#accessing-activity-history">4.6.3. Accessing activity history</a></li>
+<li><a class="reference internal" href="#sub-activities">4.6.4. Sub Activities</a></li>
+<li><a class="reference internal" href="#next-steps">4.6.5. Next Steps</a></li>
+<li><a class="reference internal" href="#bibliography">4.6.6. Bibliography</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="activity-tracking">
+<span id="andactivity"></span><h1>4.6. Activity Tracking<a class="headerlink" href="#activity-tracking" title="Permalink to this headline">¶</a></h1>
+<p>Resonance SDK comes with an integrated library for simplifying user activity detection. It has two main purposes:</p>
+<ol class="arabic simple">
+<li>Listening for event updates (e.g. user starts driving, user starts biking after walking, and so on).</li>
+<li>Accessing information concerning tracked daily activities.</li>
+</ol>
+<p>Following sections describe more in depth both features, providing detailed examples.</p>
+<div class="section" id="theoretical-basis">
+<h2>4.6.1. Theoretical Basis<a class="headerlink" href="#theoretical-basis" title="Permalink to this headline">¶</a></h2>
+<p>The activity recognition task involves mapping time-series sensor data to a single physical user activity <a class="reference internal" href="#activity-tracking-bib"><span class="std std-ref">[ Weiss2012 ]</span></a>. The sensors used to perform this task are: accelerometers and gyroscopes. To achieve this task a number of signal processing algorithm and classification algorithms from the area of <em>Machine Learning</em> are used for example: <em>Naive Bayes</em>, <em>Decision Tree</em>, <em>K-Nearest Neighbor</em> and <em>Support Vector Machine</em> classifiers <a class="reference internal" href="#activity-tracking-bib"><span class="std std-ref">[ Anjum2013 ]</span></a>.</p>
+<p>Google&#8217;s API implement those methods in order to identify what type of activity&nbsp;is&nbsp;the user doing in a specific moment, categorizing them as: <code class="docutils literal"><span class="pre">IN_VEHICLE</span></code>, <code class="docutils literal"><span class="pre">ON_BICYCLE</span></code>, <code class="docutils literal"><span class="pre">ON_FOOT</span></code>, <code class="docutils literal"><span class="pre">WALKING</span></code>, <code class="docutils literal"><span class="pre">RUNNING</span></code>, <code class="docutils literal"><span class="pre">STILL</span></code>, <code class="docutils literal"><span class="pre">TILTING</span></code>, <code class="docutils literal"><span class="pre">UNKNOWN</span></code>. To improve the results we developed a system using filters and machine leraning; this system allows us to determine very precisely the activities carried on by the user, with confidence factor from <em>70%</em> to <em>100%</em>.</p>
+</div>
+<div class="section" id="monitoring-events">
+<span id="activity-tracking-events"></span><h2>4.6.2. Monitoring Events<a class="headerlink" href="#monitoring-events" title="Permalink to this headline">¶</a></h2>
+<p>Activity tracker allows to listen for updates on user activity, with possibility of effectively monitoring transitions as well as duration of tasks.</p>
+<p>Below is reported the list of possible events that library is currently able to handle.</p>
+<ul class="simple">
+<li>Walking</li>
+<li>Running</li>
+<li>Biking</li>
+<li>Driving</li>
+<li>Still</li>
+</ul>
+<div class="section" id="transition-events">
+<h3>4.6.2.1. Transition Events<a class="headerlink" href="#transition-events" title="Permalink to this headline">¶</a></h3>
+<p>Let&#8217;s suppose in out Android application we would like to listen for all updates and execute specific code when each of them occur. It&#8217;s enough to register a <code class="docutils literal"><span class="pre">TransitionEvent</span></code> as follows.</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">// building event to monitor</span>
+<span class="n">Event</span> <span class="n">event</span> <span class="o">=</span> <span class="n">TransitionEvent</span><span class="o">.</span><span class="na">Builder</span><span class="o">.</span><span class="na">create</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">all</span><span class="o">()</span>                     <span class="c1">// all updates</span>
+  <span class="o">.</span><span class="na">doAction</span><span class="o">(</span><span class="k">new</span> <span class="n">Action</span><span class="o">()</span> <span class="o">{</span>   <span class="c1">// action to execute</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">execute</span><span class="o">(</span><span class="n">ActivityItem</span> <span class="n">from</span><span class="o">,</span> <span class="n">ActivityItem</span> <span class="n">to</span><span class="o">)</span> <span class="o">{</span>
+      <span class="c1">// execute code</span>
+    <span class="o">}</span>
+<span class="o">}).</span><span class="na">build</span><span class="o">();</span>
+<span class="c1">// register event for monitoring</span>
+<span class="n">EventHandler</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">addEvent</span><span class="o">(</span><span class="n">mEvent</span><span class="o">);</span>
+</pre></div>
+</td></tr></table></div>
+<p>Of course it&#8217;s possible to exploit <code class="docutils literal"><span class="pre">Builder</span></code> for defining more complex scenarios, as reported in the example below.</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">// building event to monitor</span>
+<span class="n">Event</span> <span class="n">event</span> <span class="o">=</span> <span class="n">TransitionEvent</span><span class="o">.</span><span class="na">Builder</span><span class="o">.</span><span class="na">create</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">from</span><span class="o">(</span><span class="n">ActivityItem</span><span class="o">.</span><span class="na">ActivityType</span><span class="o">.</span><span class="na">CAR</span><span class="o">)</span>   <span class="c1">// transition from Car</span>
+  <span class="o">.</span><span class="na">to</span><span class="o">(</span><span class="n">ActivityItem</span><span class="o">.</span><span class="na">ActivityType</span><span class="o">.</span><span class="na">WALKING</span><span class="o">)</span> <span class="c1">// to Walking</span>
+  <span class="o">.</span><span class="na">doAction</span><span class="o">(</span><span class="k">new</span> <span class="n">Action</span><span class="o">()</span> <span class="o">{</span>               <span class="c1">// action to execute</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">execute</span><span class="o">(</span><span class="n">ActivityItem</span> <span class="n">from</span><span class="o">,</span> <span class="n">ActivityItem</span> <span class="n">to</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// execute code</span>
+    <span class="o">}</span>
+<span class="o">}).</span><span class="na">build</span><span class="o">();</span>
+<span class="c1">// register event for monitoring</span>
+<span class="n">EventHandler</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">addEvent</span><span class="o">(</span><span class="n">mEvent</span><span class="o">);</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="duration-events">
+<h3>4.6.2.2. Duration Events<a class="headerlink" href="#duration-events" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">DurationEvent</span></code> objects can be used in all situations where we would like to receive updates on activities that are on progress. Let&#8217;s suppose for example we would like to be notified when driving car for more than 1 hour. We can proceed as follows:</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">// building event to monitor</span>
+<span class="n">Event</span> <span class="n">event</span> <span class="o">=</span> <span class="n">DurationEvent</span><span class="o">.</span><span class="na">Builder</span><span class="o">.</span><span class="na">create</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">ActivityItem</span><span class="o">.</span><span class="na">ActivityType</span><span class="o">.</span><span class="na">CAR</span><span class="o">)</span>      <span class="c1">// activity Car</span>
+  <span class="o">.</span><span class="na">isMoreThan</span><span class="o">(</span><span class="n">TimeUnit</span><span class="o">.</span><span class="na">HOURS</span><span class="o">.</span><span class="na">toMillis</span><span class="o">(</span><span class="mi">1</span><span class="o">))</span> <span class="c1">// for more than 1 hour</span>
+  <span class="o">.</span><span class="na">doAction</span><span class="o">(</span><span class="k">new</span> <span class="n">Action</span><span class="o">()</span> <span class="o">{</span>                <span class="c1">// action to execute</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">execute</span><span class="o">(</span><span class="n">ActivityItem</span> <span class="n">from</span><span class="o">,</span> <span class="n">ActivityItem</span> <span class="n">to</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// execute code</span>
+    <span class="o">}</span>
+<span class="o">}).</span><span class="na">build</span><span class="o">();</span>
+<span class="c1">// register event for monitoring</span>
+<span class="n">EventHandler</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">addEvent</span><span class="o">(</span><span class="n">mEvent</span><span class="o">);</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="handling-events">
+<h3>4.6.2.3. Handling Events<a class="headerlink" href="#handling-events" title="Permalink to this headline">¶</a></h3>
+<p>Looking at code shown in past sections it is obvious that <code class="docutils literal"><span class="pre">EventHandler</span></code> is a singleton class used for registering events to be monitored. It&#8217;s important to highlight that such class not only provides <code class="docutils literal"><span class="pre">addEvent()</span></code> method, but also <code class="docutils literal"><span class="pre">removeEvent()</span></code> method. This method is used for removing events in specific contexts, for example when monitoring should occur within an <code class="docutils literal"><span class="pre">Activity</span></code> only.</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kd">private</span> <span class="n">Event</span> <span class="n">mEvent</span><span class="o">;</span>
+
+<span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+  <span class="n">mEvent</span> <span class="o">=</span> <span class="c1">// build your event here</span>
+<span class="o">}</span>
+
+<span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">onResume</span><span class="o">()</span> <span class="o">{</span>
+  <span class="kd">super</span><span class="o">.</span><span class="na">onResume</span><span class="o">();</span>
+  <span class="n">EventHandler</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">addEvent</span><span class="o">(</span><span class="n">mEvent</span><span class="o">);</span>
+  <span class="c1">// ...</span>
+<span class="o">}</span>
+
+<span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">onPause</span><span class="o">()</span> <span class="o">{</span>
+  <span class="kd">super</span><span class="o">.</span><span class="na">onPause</span><span class="o">();</span>
+  <span class="n">EventHandler</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">removeEvent</span><span class="o">(</span><span class="n">mEvent</span><span class="o">);</span>
+  <span class="c1">// ...</span>
+<span class="o">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="accessing-activity-history">
+<h2>4.6.3. Accessing activity history<a class="headerlink" href="#accessing-activity-history" title="Permalink to this headline">¶</a></h2>
+<p>Activity tracking library automatically sends data concerning user daily activities to Atooma backend for processing, building history and processing outcomes available through an easy to use programming interface.</p>
+<p>Let&#8217;s suppose for example we would like to get daily activities for current day. We can exploit following code:</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">// building java.util.Date to retrieve activities for</span>
+<span class="n">Date</span> <span class="n">date</span> <span class="o">=</span> <span class="o">...</span>
+<span class="c1">// building listener for getting list of ActivityItem objects</span>
+<span class="n">AdvisedElementsResponseHandler</span><span class="o">&lt;</span><span class="n">ActivityItem</span><span class="o">&gt;</span> <span class="n">listener</span> <span class="o">=</span> <span class="o">...</span>
+<span class="c1">// getting resonance advisor</span>
+<span class="n">Context</span> <span class="n">context</span> <span class="o">=</span> <span class="n">getApplicationContext</span><span class="o">();</span>
+<span class="n">ResonanceAdvisor</span> <span class="n">advisor</span> <span class="o">=</span> <span class="n">ResonanceApiClient</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="n">context</span><span class="o">).</span><span class="na">getAdvisor</span><span class="o">();</span>
+<span class="n">advisor</span><span class="o">.</span><span class="na">getDailyActivities</span><span class="o">(</span><span class="n">date</span><span class="o">,</span> <span class="n">listener</span><span class="o">);</span>
+</pre></div>
+</td></tr></table></div>
+<p>Please notice that more details on <code class="docutils literal"><span class="pre">ResonanceAdvisor</span></code> class will be provided in section <a class="reference internal" href="andresonance.html#resonance-advisor"><span class="std std-ref">Advisor</span></a>.</p>
+<p>Interface AdvisedElementsResponseHandler is used by <code class="docutils literal"><span class="pre">ResonanceAdvisor</span></code> for asynchronously returning lists of objects. It&#8217;s enough in this sense to implement method <code class="docutils literal"><span class="pre">onAdvisedElementsRetrievedListener</span></code>, taking the list of returned elements as input param:</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">AdvisedElementsResponseHandler</span><span class="o">&lt;</span><span class="n">ActivityItem</span><span class="o">&gt;</span> <span class="n">listener</span> <span class="o">=</span>
+  <span class="k">new</span> <span class="n">AdvisedElementsResponseHandler</span><span class="o">&lt;&gt;()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onAdvisedElementsRetrievedListener</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">ActivityItem</span><span class="o">&gt;</span> <span class="n">activities</span><span class="o">)</span> <span class="o">{</span>
+      <span class="c1">// do something with activities here</span>
+    <span class="o">}</span>
+  <span class="o">};</span>
+</pre></div>
+</td></tr></table></div>
+<p>Returned list of <code class="docutils literal"><span class="pre">ActivityItem</span></code> instances is an objects based representation for a timeline, as shown in the following image.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/timeline.png"><img alt="Daily Activities" src="_images/timeline.png" style="width: 250px;" /></a>
+</div>
+<p>More details on timeline implementation are reported in section <a class="reference internal" href="andexamples.html#example-timeline"><span class="std std-ref">Example 5 - Timeline</span></a>.</p>
+</div>
+<div class="section" id="sub-activities">
+<h2>4.6.4. Sub Activities<a class="headerlink" href="#sub-activities" title="Permalink to this headline">¶</a></h2>
+<p>Resonance SDK comes with a set of functions allowing to go deep into activity recognition statuses described in <a class="reference internal" href="#activity-tracking-events"><span class="std std-ref">Monitoring Events</span></a>. Relying on data collected from user devices, Resonance is able to provide low level information on user sub-activity, as reported below:</p>
+<ul class="simple">
+<li>Walking</li>
+<li>Running</li>
+<li>Biking</li>
+<li>Driving<ul>
+<li>Car</li>
+<li>Bus</li>
+<li>Subway</li>
+<li>Ferry</li>
+<li>Train</li>
+</ul>
+</li>
+<li>Still<ul>
+<li>Home</li>
+<li>Work</li>
+<li>Cafe</li>
+<li>Restaurant</li>
+<li>Cinema</li>
+<li>Bar</li>
+<li>Pub</li>
+<li>Fast Food</li>
+<li>Theatre</li>
+<li>Gym</li>
+<li>Bank</li>
+<li>University</li>
+<li>School</li>
+<li>Kindergarten</li>
+<li>Library</li>
+<li>Fuel</li>
+<li>Charging Station</li>
+<li>Arts Centre</li>
+<li>Place of Worship</li>
+<li>Post Office</li>
+<li>Sauna</li>
+</ul>
+</li>
+</ul>
+<p>Concept behind sub status is that developer can query Resonance on a specific activity for asking more details. Resonance will provide an answer with a set of sub statuses, each one with a corresponding confidence. It follows a basic example:</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">// item is an ActivityItem to check</span>
+<span class="n">ResonanceAdvisor</span> <span class="n">advisor</span> <span class="o">=</span> <span class="n">mResonanceApiClient</span><span class="o">.</span><span class="na">getAdvisor</span><span class="o">();</span>
+<span class="n">advisor</span><span class="o">.</span><span class="na">getSubStatus</span><span class="o">(</span><span class="n">item</span><span class="o">,</span>
+    <span class="k">new</span> <span class="n">AdvisedElementsResponseHandler</span><span class="o">&lt;</span><span class="n">AdvisedActivityDetail</span><span class="o">&gt;(</span><span class="n">AdvisedActivityDetail</span><span class="o">.</span><span class="na">class</span><span class="o">)</span> <span class="o">{</span>
+      <span class="nd">@Override</span>
+      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onAdvisedElementsRetrievedListener</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">AdvisedActivityDetail</span><span class="o">&gt;</span> <span class="n">elements</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// write here your code</span>
+      <span class="o">}</span>
+<span class="o">});</span>
+</pre></div>
+</td></tr></table></div>
+<p>Each <code class="docutils literal"><span class="pre">AdvisedActivityDetail</span></code> element includes <code class="docutils literal"><span class="pre">type</span></code> and <code class="docutils literal"><span class="pre">confidence</span></code> parameters, as reported in the example below:</p>
+<div class="highlight-json"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;confidence&quot;</span><span class="p">:</span> <span class="mf">95.870514540028921</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;BUS&quot;</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;confidence&quot;</span><span class="p">:</span> <span class="mi">75</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;CAR&quot;</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="next-steps">
+<h2>4.6.5. Next Steps<a class="headerlink" href="#next-steps" title="Permalink to this headline">¶</a></h2>
+<p>Activity recognition is crucial to be able to recognize and categorize the behavior of the user and detect habits and hobbies. In the following months the detection system currently implemented will be perfectioned/improved by using not only the data provided by Google&#8217;s API but also other sources of information like wearable devices and geographic locators. A feedback, and the subsequent machine learning system, will also be developed to customize and perfection the algorithms for each user.</p>
+</div>
+<div class="section" id="bibliography">
+<span id="activity-tracking-bib"></span><h2>4.6.6. Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="85%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>[ Weiss2012 ]</strong></td>
+<td>Weiss, G. M., and Jeffrey W. L. &#8220;The impact of personalization on smartphone-based activity recognition.&#8221;
+AAAI Workshop on Activity Context Representation: Techniques and Languages. 2012.</td>
+</tr>
+<tr class="row-even"><td><strong>[ Anjum2013 ]</strong></td>
+<td>Anjum, A., and Muhammad, U. I. &#8220;Activity recognition using smartphone sensors.&#8221; Consumer Communications and
+Networking Conference (CCNC), 2013 IEEE. IEEE, 2013.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="_sources/andactivity.txt"
+     rel="nofollow">Source</a>
+</div>
+      
+    </p>
+    <p>
+        &copy; Copyright 2016, Atooma Inc.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.4.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

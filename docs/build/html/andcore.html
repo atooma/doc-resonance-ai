@@ -1,0 +1,412 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>4.1. Core Concepts &mdash; Resonance AI SDK 2.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.6/spacelab/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/atooma.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="Resonance AI SDK 2.1.0 documentation" href="index.html" />
+    <link rel="up" title="4. Resonance Android SDK framework" href="android.html" />
+    <link rel="next" title="4.2. Rules Engine" href="andengine.html" />
+    <link rel="prev" title="4. Resonance Android SDK framework" href="android.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          Resonance AI SDK</a>
+        <span class="navbar-text navbar-version pull-left"><b>2.1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Contents <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-we-believe">1.1. What We Believe?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-is-resonance-why-there-is-an-atooma-app-on-the-market">1.2. What Is Resonance - Why There Is An Atooma App On The Market?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-is-resonance-sdk">1.3. What Is Resonance SDK?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-you-need">1.4. What You Need?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getstart.html">2. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getstart.html#declaring-features-of-interest">2.1. Declaring Features of Interest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getstart.html#data-sources-definition">2.2. Data Sources Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getstart.html#rule-engine-configuration">2.3. Rule Engine Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="iosstart.html">3. Resonance iOS SDK framework</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="iosstart.html#add-the-sdk-to-your-xcode-project">3.1. Add the SDK to your Xcode Project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#configure-the-app-capabilities">3.1.1. Configure the app capabilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#set-the-location-service-permission-string">3.1.2. Set the Location Service permission string</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#objective-c">3.1.3. Objective-C</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#all-set">3.1.4. All set!</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iosstart.html#data-collector">3.2. Data Collector</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#configure-the-collector">3.2.1. Configure the collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#ask-for-permission">3.2.2. Ask for Permission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#start-the-collector">3.2.3. Start the collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#stop-the-collector">3.2.4. Stop the collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#logger">3.2.5. Logger</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iosstart.html#activity-tracking">3.3. Activity Tracking</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#history">3.3.1. History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#realtime-event-monitoring-beta">3.3.2. Realtime Event Monitoring (Beta)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="android.html">4. Resonance Android SDK framework</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.1. Core Concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#modules">4.1.1. Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rules">4.1.2. Rules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-analysis">4.1.3. Data Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="andengine.html">4.2. Rules Engine</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andengine.html#the-ruledefinition-class">4.2.1. The <em>RuleDefinition</em> Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andengine.html#the-atooma-class">4.2.2. The <em>Atooma</em> Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andengine.html#the-ruleconflictschecker-class">4.2.3. The <em>RuleConflictsChecker</em> Class</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="andxml.html">4.3. Defining Rules With XML</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andxml.html#property-values">4.3.1. Property Values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andxml.html#external-provider-calls">4.3.2. External Provider Calls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andxml.html#example">4.3.3. Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andxml.html#atooma-binary-format">4.3.4. Atooma binary format</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="andprogramming.html">4.4. Developing Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andprogramming.html#creating-modules">4.4.1. Creating Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andprogramming.html#creating-value-types">4.4.2. Creating Value Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andprogramming.html#creating-triggers">4.4.3. Creating Triggers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andprogramming.html#creating-condition-checkers">4.4.4. Creating Condition Checkers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andprogramming.html#trigger-and-condition-checker-affinity">4.4.5. Trigger and Condition Checker Affinity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andprogramming.html#creating-performers">4.4.6. Creating Performers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="andreference.html">4.5. Modules API Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#oauth-based-modules">4.5.1. OAuth Based Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#activity-manager">4.5.2. Activity Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#airplane">4.5.3. Airplane</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#alarm">4.5.4. Alarm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#battery">4.5.5. Battery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#bluetooth">4.5.6. Bluetooth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#camera">4.5.7. Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#contacts">4.5.8. Contacts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#core">4.5.9. Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#data-sync">4.5.10. Data Sync</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#module-dropbox">4.5.11. Dropbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#facebook">4.5.12. Facebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#google-calendar">4.5.13. Google Calendar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#google-drive">4.5.14. Google Drive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#gmail">4.5.15. Gmail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#headphone">4.5.16. Headphone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#module-instagram">4.5.17. Instagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#location">4.5.18. Location</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#notification">4.5.19. Notification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#shake">4.5.20. Shake</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#sms">4.5.21. SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#telephony">4.5.22. Telephony</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#text-to-speech">4.5.23. Text To Speech</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#module-twitter">4.5.24. Twitter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#wifi">4.5.25. WiFi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#weather">4.5.26. Weather</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="andactivity.html">4.6. Activity Tracking</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andactivity.html#theoretical-basis">4.6.1. Theoretical Basis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andactivity.html#monitoring-events">4.6.2. Monitoring Events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andactivity.html#accessing-activity-history">4.6.3. Accessing activity history</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andactivity.html#sub-activities">4.6.4. Sub Activities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andactivity.html#next-steps">4.6.5. Next Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andactivity.html#bibliography">4.6.6. Bibliography</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="andresonance.html">4.7. Resonance API Client</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andresonance.html#theoretical-basis">4.7.1. Theoretical Basis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andresonance.html#resonanceapiclient-class">4.7.2. <em>ResonanceApiClient</em> class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andresonance.html#data-collector">4.7.3. Data Collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andresonance.html#advisor">4.7.4. Advisor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andresonance.html#next-steps">4.7.5. Next Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andresonance.html#bibliography">4.7.6. Bibliography</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="andexamples.html">4.8. Building Own Applications</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andexamples.html#example-0-rule-engine-basics">4.8.1. Example 0 - Rule Engine Basics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andexamples.html#example-1-external-providers">4.8.2. Example 1 - External Providers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andexamples.html#example-2-custom-modules">4.8.3. Example 2 - Custom Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andexamples.html#example-3-xml-as-a-template">4.8.4. Example 3 - XML As A Template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andexamples.html#example-4-parking-reminder">4.8.5. Example 4 - Parking Reminder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andexamples.html#example-5-timeline">4.8.6. Example 5 - Timeline</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="android.html#stable-gradle-configuration">4.9. Stable Gradle Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android.html#basic-manifest-configuration">4.10. Basic Manifest Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android.html#changelog">4.11. Changelog</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">4.1. Core Concepts</a><ul>
+<li><a class="reference internal" href="#modules">4.1.1. Modules</a><ul>
+<li><a class="reference internal" href="#value-type">4.1.1.1. Value Type</a></li>
+<li><a class="reference internal" href="#trigger">4.1.1.2. Trigger</a></li>
+<li><a class="reference internal" href="#condition-checker">4.1.1.3. Condition Checker</a></li>
+<li><a class="reference internal" href="#performer">4.1.1.4. Performer</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rules">4.1.2. Rules</a><ul>
+<li><a class="reference internal" href="#trigger-definition">4.1.2.1. Trigger Definition</a></li>
+<li><a class="reference internal" href="#condition-checkers-definition">4.1.2.2. Condition Checkers Definition</a></li>
+<li><a class="reference internal" href="#performers-definition">4.1.2.3. Performers Definition</a></li>
+<li><a class="reference internal" href="#parameters-properties-and-injected-values">4.1.2.4. Parameters, Properties and Injected Values</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data-analysis">4.1.3. Data Analysis</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="core-concepts">
+<span id="andcore"></span><h1>4.1. Core Concepts<a class="headerlink" href="#core-concepts" title="Permalink to this headline">¶</a></h1>
+<p>Target of this section is to provide a high level description of the core concepts behind the Atooma environment. Focus will be on <strong>Modules</strong> and their inner structure, with emphasis on how they can be used for building <strong>Rules</strong> to be executed.</p>
+<div class="section" id="modules">
+<h2>4.1.1. Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
+<p><strong>Modules</strong> are sets of related functions packed into self-consistent software units, that are used for creating and executing rules. For example, <code class="docutils literal"><span class="pre">SMS</span></code> module includes functionalities for receiving, sending and managing messages, while <code class="docutils literal"><span class="pre">WiFi</span></code> module allows to control device WiFi features.</p>
+<p>Some modules may be not available on all devices. For example, if device lacks of <code class="docutils literal"><span class="pre">NFC</span></code> hardware, the corresponding module won’t be shown and, as a consequence, all rules including <code class="docutils literal"><span class="pre">NFC</span></code> module won&#8217;t be executed.</p>
+<p>Each module defines a set of components among the following: <a class="reference internal" href="#corevaluetype"><span class="std std-ref">Value Type</span></a> , <a class="reference internal" href="#coretrigger"><span class="std std-ref">Trigger</span></a> , <a class="reference internal" href="#coreconditionchecker"><span class="std std-ref">Condition Checker</span></a> and <a class="reference internal" href="#coreperformer"><span class="std std-ref">Performer</span></a>. All of them are described more in details in the following sections.</p>
+<div class="section" id="value-type">
+<span id="corevaluetype"></span><h3>4.1.1.1. Value Type<a class="headerlink" href="#value-type" title="Permalink to this headline">¶</a></h3>
+<p><strong>Value Type</strong> are components defining data types managed by the module. <code class="docutils literal"><span class="pre">STRING</span></code>, <code class="docutils literal"><span class="pre">BOOLEAN</span></code>, <code class="docutils literal"><span class="pre">NUMBER</span></code> and <code class="docutils literal"><span class="pre">DATE</span></code> are examples of basic value types defined in <code class="docutils literal"><span class="pre">CORE</span></code> module. Regardless of their internal representation, all value types must have a serialized format, allowing them to be exchanged as byte sequences, through a convention that must be specified by the value type definition itself.</p>
+</div>
+<div class="section" id="trigger">
+<span id="coretrigger"></span><h3>4.1.1.2. Trigger<a class="headerlink" href="#trigger" title="Permalink to this headline">¶</a></h3>
+<p><strong>Triggers</strong> are rule activators. They are in charge of executing rules when specific events occur.</p>
+<p>Each trigger can include parameters, allowing to configure rule activation in some conditions only. For example, <code class="docutils literal"><span class="pre">SMS</span></code> module defines a trigger <code class="docutils literal"><span class="pre">INCOMING</span></code> that is activated when an <code class="docutils literal"><span class="pre">SMS</span></code> is received. It&#8217;s possible to filter events by monitoring only messages coming from a specific <em>sender</em>.</p>
+<p>When activated, a trigger can inject values into the rule exectution context. For example <code class="docutils literal"><span class="pre">INCOMING</span></code> trigger of <code class="docutils literal"><span class="pre">SMS</span></code> module provides a set of information like message <em>content</em>, <em>sender</em> and so on.</p>
+</div>
+<div class="section" id="condition-checker">
+<span id="coreconditionchecker"></span><h3>4.1.1.3. Condition Checker<a class="headerlink" href="#condition-checker" title="Permalink to this headline">¶</a></h3>
+<p><strong>Condition Checkers</strong> are boolean functions accepting one or more parameters. They are used in conditional part of the rule for checking values. One example for <code class="docutils literal"><span class="pre">WiFi</span></code> module is <code class="docutils literal"><span class="pre">CONNECTED</span></code>, that returns <em>true</em> if device is connected to <code class="docutils literal"><span class="pre">WiFi</span></code> with <em>SSID</em> name specified as parameter.</p>
+</div>
+<div class="section" id="performer">
+<span id="coreperformer"></span><h3>4.1.1.4. Performer<a class="headerlink" href="#performer" title="Permalink to this headline">¶</a></h3>
+<p><strong>Performers</strong> are components executing actions. For example, <code class="docutils literal"><span class="pre">Facebook</span></code> module has a performer <code class="docutils literal"><span class="pre">POST_ON_WALL</span></code>, allowing to post a message provided in input on a friend&#8217;s wall. Also performers can inject values into the rule execution context. Purpose is making such data avilable for the following performers.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Rule performers are not executed in parallel. They are treated as a pipeline. That&#8217;s why each element can receive parameters in input and produce parameters in output.</p>
+</div>
+</div>
+</div>
+<div class="section" id="rules">
+<span id="id1"></span><h2>4.1.2. Rules<a class="headerlink" href="#rules" title="Permalink to this headline">¶</a></h2>
+<p><strong>Rules</strong> are programs defining actions to execute when a specific event occurs, according to an <em>if-do paradigm</em> where <em>if part</em> is made by one trigger and contains up to four condition checkers, while <em>do part</em> contains up to five perfomers.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/rule.jpg"><img alt="Atooma rules paradigm" src="_images/rule.jpg" style="width: 600px;" /></a>
+</div>
+<p>In practice, <em>if-do parts</em> are contained in what is defined as <strong>rule body</strong>.</p>
+<p>In addition to body, all rules include a <strong>header</strong>, declaring all basic rule information:</p>
+<ul class="simple">
+<li>A <strong>title</strong> for the rule (max 50 chars).</li>
+<li>An optional <strong>description</strong> of the rule (max 250 chars).</li>
+<li>The list of <strong>modules</strong> (with corresponding min version) that are needed for executing the rule.</li>
+<li>An optional list of <strong>properties</strong> to be used as parameters for the rule, each one including an <strong>identifier</strong>, a <strong>value type</strong> and a <strong>value</strong>.</li>
+</ul>
+<p>Following sections provide advanced details on the structure of <a class="reference external" href="core.html#coretriggerdef">Trigger</a>, <a class="reference external" href="core.html#coreconditioncheckerdef">Condition Checker</a> and <a class="reference external" href="core.html#coreperformerdef">Performer</a> definitions.</p>
+<div class="section" id="trigger-definition">
+<span id="coretriggerdef"></span><h3>4.1.2.1. Trigger Definition<a class="headerlink" href="#trigger-definition" title="Permalink to this headline">¶</a></h3>
+<p>Trigger definition provides the configuration for the rule trigger. It includes three elements:</p>
+<ul class="simple">
+<li>The <strong>module</strong> implementing the trigger.</li>
+<li>The <strong>identifier</strong> of the trigger.</li>
+<li>The eventual <strong>list of parameters</strong> required by the trigger.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Since rules are activated by triggers it&#8217;s essential for them to define it.</p>
+</div>
+</div>
+<div class="section" id="condition-checkers-definition">
+<span id="coreconditioncheckerdef"></span><h3>4.1.2.2. Condition Checkers Definition<a class="headerlink" href="#condition-checkers-definition" title="Permalink to this headline">¶</a></h3>
+<p>Condition checker definition provides the configuration for a condition to be verified within the execution context of the rule after trigger activation. It includes four elements:</p>
+<ul class="simple">
+<li>The <strong>module</strong> implementing the condition checker.</li>
+<li>The <strong>identifier</strong> of the condition checker.</li>
+<li>The eventual <strong>list of parameters</strong> required by the condition checker.</li>
+<li>The eventual <strong>inversion of the boolean</strong> result of the condition evaluation (<code class="docutils literal"><span class="pre">NOT</span></code> operator).</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">A rule can have up to four condition checkers, to be verified according to their declaration order. As soon as a condition evaluation returns <em>false</em>, the rule execution is interrupted. As a result, all subsequent conditions won&#8217;t be evaluated and performers won&#8217;t be executed.</p>
+</div>
+</div>
+<div class="section" id="performers-definition">
+<span id="coreperformerdef"></span><h3>4.1.2.3. Performers Definition<a class="headerlink" href="#performers-definition" title="Permalink to this headline">¶</a></h3>
+<p>Performer definition provides the configuration for a performer to be executed in case trigger is activated and all conditions are verified. It includes three elements:</p>
+<ul class="simple">
+<li>The <strong>module</strong> implementing the performer.</li>
+<li>The <strong>identifier</strong> of the performer.</li>
+<li>The eventual <strong>list of parameters</strong> required by the performer.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All rules must include at least one performer.</p>
+</div>
+</div>
+<div class="section" id="parameters-properties-and-injected-values">
+<h3>4.1.2.4. Parameters, Properties and Injected Values<a class="headerlink" href="#parameters-properties-and-injected-values" title="Permalink to this headline">¶</a></h3>
+<p>Defining trigger, condition checkers and performers may often require to use parameters, each one including an <strong>identifier</strong> and a <strong>value type</strong>.</p>
+<p>There are four possible value sources for parameters:</p>
+<ul class="simple">
+<li><strong>Rule properties</strong> - Properties declared within rule definition can be used as static parameter values.</li>
+<li><strong>Injection from trigger</strong> - When activating the execution of a rule, a trigger can inject one or more variables into the rule execution context. Of course, such variables can be used by performers only.</li>
+<li><strong>Injection from performer</strong> - During their execution, performers can inject one or more variables into the rule execution context. A variable coming from a performer can be used only after the execution of the performer that generated it.</li>
+<li><strong>External providers</strong> - Static functions can be used for dynamically generating values for rule variables.</li>
+</ul>
+<p>Of course depending on component, only some parameter sources can be used:</p>
+<ul class="simple">
+<li><strong>Triggers</strong> - Parameters can be rule properties or values coming from external providers. In particular, every time a trigger parameter is read from an external provider with rule already active, the rule itself is reloaded into Atooma engine.</li>
+<li><strong>Condition Checkers</strong> - Parameters can be rule properties, values coming from external providers or values injected from trigger.</li>
+<li><strong>Performers</strong> - Parameters can be rule properties, values coming from external providers, values injected from trigger or values injected from other performers previously executed.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="data-analysis">
+<h2>4.1.3. Data Analysis<a class="headerlink" href="#data-analysis" title="Permalink to this headline">¶</a></h2>
+<p>On top of <strong>Rules Engine</strong>, Resonance SDK comes with a set of API allowing to determine user attitudes and providing to developers suitable functions for retrieving interesting user-related data.</p>
+<p>By analyzing data coming from user devices (from smartphones to connected wearables), Resonance SDK is able to answer to questions like:</p>
+<ul class="simple">
+<li>Where does user live?</li>
+<li>Where does user work?</li>
+<li>Which is user favorite restaurant?</li>
+<li>Does user most commonly take car or bus?</li>
+<li>Which rules / smart actions can be more suitable for users?</li>
+</ul>
+<p>... and much more.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/data_analysis.png"><img alt="Subsystems for Data Analysis" src="_images/data_analysis.png" style="width: 650px;" /></a>
+</div>
+<p>Resonance subsystem for Data Analysis is made of three main functional blocks:</p>
+<ul class="simple">
+<li><strong>Data Collector</strong> - Allows to retrieve data from devices and to send them to Backend.</li>
+<li><strong>Backend</strong> - Receive data from devices, store and analyze them for determining regularities.</li>
+<li><strong>Advisor</strong> - Provide high level functions for exposing to clients all relevant information determined by Backend.</li>
+</ul>
+<p>Resonance Data Collector is the most important functional block for Data Analysis, having following responsibilities:</p>
+<ul class="simple">
+<li><strong>Retrieving</strong> data from user devices, adopting strategies aimed to reduce the amount of useless information by increasing sample rate in presence of more complex activities, of course with an eye to battery drain.</li>
+<li><strong>Pre-processing</strong> data for keeping just significant information.</li>
+<li><strong>Packaging</strong> valuable information into a structured format, ready to be delivered to Resonance Backend</li>
+<li><strong>Deliverying</strong> data to Resonance Backend, minimizing network load.</li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="_sources/andcore.txt"
+     rel="nofollow">Source</a>
+</div>
+      
+    </p>
+    <p>
+        &copy; Copyright 2016, Atooma Inc.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.4.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Data Sync &mdash; Resonance AI SDK 2.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/spacelab/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/atooma.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="Resonance AI SDK 2.1.0 documentation" href="../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Resonance AI SDK</a>
+        <span class="navbar-text navbar-version pull-left"><b>2.1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Contents <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">1. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#what-we-believe">1.1. What We Believe?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#what-is-resonance-why-there-is-an-atooma-app-on-the-market">1.2. What Is Resonance - Why There Is An Atooma App On The Market?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#what-is-resonance-sdk">1.3. What Is Resonance SDK?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#what-you-need">1.4. What You Need?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getstart.html">2. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getstart.html#declaring-features-of-interest">2.1. Declaring Features of Interest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getstart.html#data-sources-definition">2.2. Data Sources Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getstart.html#rule-engine-configuration">2.3. Rule Engine Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../iosstart.html">3. Resonance iOS SDK framework</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../iosstart.html#add-the-sdk-to-your-xcode-project">3.1. Add the SDK to your Xcode Project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../iosstart.html#configure-the-app-capabilities">3.1.1. Configure the app capabilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../iosstart.html#set-the-location-service-permission-string">3.1.2. Set the Location Service permission string</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../iosstart.html#objective-c">3.1.3. Objective-C</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../iosstart.html#all-set">3.1.4. All set!</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../iosstart.html#data-collector">3.2. Data Collector</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../iosstart.html#configure-the-collector">3.2.1. Configure the collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../iosstart.html#ask-for-permission">3.2.2. Ask for Permission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../iosstart.html#start-the-collector">3.2.3. Start the collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../iosstart.html#stop-the-collector">3.2.4. Stop the collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../iosstart.html#logger">3.2.5. Logger</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../iosstart.html#activity-tracking">3.3. Activity Tracking</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../iosstart.html#history">3.3.1. History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../iosstart.html#realtime-event-monitoring-beta">3.3.2. Realtime Event Monitoring (Beta)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../android.html">4. Resonance Android SDK framework</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../andcore.html">4.1. Core Concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../andcore.html#modules">4.1.1. Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andcore.html#rules">4.1.2. Rules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andcore.html#data-analysis">4.1.3. Data Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../andengine.html">4.2. Rules Engine</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../andengine.html#the-ruledefinition-class">4.2.1. The <em>RuleDefinition</em> Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andengine.html#the-atooma-class">4.2.2. The <em>Atooma</em> Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andengine.html#the-ruleconflictschecker-class">4.2.3. The <em>RuleConflictsChecker</em> Class</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../andxml.html">4.3. Defining Rules With XML</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../andxml.html#property-values">4.3.1. Property Values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andxml.html#external-provider-calls">4.3.2. External Provider Calls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andxml.html#example">4.3.3. Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andxml.html#atooma-binary-format">4.3.4. Atooma binary format</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../andprogramming.html">4.4. Developing Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../andprogramming.html#creating-modules">4.4.1. Creating Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andprogramming.html#creating-value-types">4.4.2. Creating Value Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andprogramming.html#creating-triggers">4.4.3. Creating Triggers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andprogramming.html#creating-condition-checkers">4.4.4. Creating Condition Checkers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andprogramming.html#trigger-and-condition-checker-affinity">4.4.5. Trigger and Condition Checker Affinity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andprogramming.html#creating-performers">4.4.6. Creating Performers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../andreference.html">4.5. Modules API Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../andreference.html#oauth-based-modules">4.5.1. OAuth Based Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andreference.html#activity-manager">4.5.2. Activity Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andreference.html#airplane">4.5.3. Airplane</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andreference.html#alarm">4.5.4. Alarm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andreference.html#battery">4.5.5. Battery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andreference.html#bluetooth">4.5.6. Bluetooth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andreference.html#camera">4.5.7. Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andreference.html#contacts">4.5.8. Contacts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andreference.html#core">4.5.9. Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andreference.html#data-sync">4.5.10. Data Sync</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andreference.html#module-dropbox">4.5.11. Dropbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andreference.html#facebook">4.5.12. Facebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andreference.html#google-calendar">4.5.13. Google Calendar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andreference.html#google-drive">4.5.14. Google Drive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andreference.html#gmail">4.5.15. Gmail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andreference.html#headphone">4.5.16. Headphone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andreference.html#module-instagram">4.5.17. Instagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andreference.html#location">4.5.18. Location</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andreference.html#notification">4.5.19. Notification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andreference.html#shake">4.5.20. Shake</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andreference.html#sms">4.5.21. SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andreference.html#telephony">4.5.22. Telephony</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andreference.html#text-to-speech">4.5.23. Text To Speech</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andreference.html#module-twitter">4.5.24. Twitter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andreference.html#wifi">4.5.25. WiFi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andreference.html#weather">4.5.26. Weather</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../andactivity.html">4.6. Activity Tracking</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../andactivity.html#theoretical-basis">4.6.1. Theoretical Basis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andactivity.html#monitoring-events">4.6.2. Monitoring Events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andactivity.html#accessing-activity-history">4.6.3. Accessing activity history</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andactivity.html#sub-activities">4.6.4. Sub Activities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andactivity.html#next-steps">4.6.5. Next Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andactivity.html#bibliography">4.6.6. Bibliography</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../andresonance.html">4.7. Resonance API Client</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../andresonance.html#theoretical-basis">4.7.1. Theoretical Basis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andresonance.html#resonanceapiclient-class">4.7.2. <em>ResonanceApiClient</em> class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andresonance.html#data-collector">4.7.3. Data Collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andresonance.html#advisor">4.7.4. Advisor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andresonance.html#next-steps">4.7.5. Next Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andresonance.html#bibliography">4.7.6. Bibliography</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../andexamples.html">4.8. Building Own Applications</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../andexamples.html#example-0-rule-engine-basics">4.8.1. Example 0 - Rule Engine Basics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andexamples.html#example-1-external-providers">4.8.2. Example 1 - External Providers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andexamples.html#example-2-custom-modules">4.8.3. Example 2 - Custom Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andexamples.html#example-3-xml-as-a-template">4.8.4. Example 3 - XML As A Template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andexamples.html#example-4-parking-reminder">4.8.5. Example 4 - Parking Reminder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../andexamples.html#example-5-timeline">4.8.6. Example 5 - Timeline</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../android.html#stable-gradle-configuration">4.9. Stable Gradle Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../android.html#basic-manifest-configuration">4.10. Basic Manifest Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../android.html#changelog">4.11. Changelog</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Data Sync</a><ul>
+<li><a class="reference internal" href="#trigger-sync-enabled">Trigger Sync Enabled</a></li>
+<li><a class="reference internal" href="#trigger-sync-disabled">Trigger Sync Disabled</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="data-sync">
+<span id="module-sync"></span><h1>Data Sync<a class="headerlink" href="#data-sync" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><strong>Identifier</strong> - DATA-SYNC</li>
+<li><strong>Description</strong> - Allows to control background synchronization settings.</li>
+<li><strong>Current Version</strong> - 1</li>
+<li><strong>Initialization</strong> - None</li>
+<li><strong>Destroy</strong> - None</li>
+<li><strong>Dependencies</strong> - <a class="reference internal" href="core.html#module-core"><span class="std std-ref">Core</span></a></li>
+</ul>
+<div class="section" id="trigger-sync-enabled">
+<h2>Trigger Sync Enabled<a class="headerlink" href="#trigger-sync-enabled" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="12%" />
+<col width="88%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Name</td>
+<td>ON</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>Enable background synchronization.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="trigger-sync-disabled">
+<h2>Trigger Sync Disabled<a class="headerlink" href="#trigger-sync-disabled" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="12%" />
+<col width="88%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Name</td>
+<td>OFF</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>Disable background synchronization.</td>
+</tr>
+</tbody>
+</table>
+<p>In practice, using this module will have the effect of controlling account synchronization flag reported in the screenshot below (taken from a Google Nexus 5).</p>
+<blockquote id="fig-module-sync">
+<div><a class="reference internal image-reference" href="modules/_static/img/module_sync_1.png"><img alt="Configuration Flag" src="modules/_static/img/module_sync_1.png" style="width: 40%;" /></a>
+<a class="reference internal image-reference" href="modules/_static/img/module_sync_2.png"><img alt="Configuration Warning" class="align-right" src="modules/_static/img/module_sync_2.png" style="width: 40%;" /></a>
+</div></blockquote>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="../_sources/modules/sync.txt"
+     rel="nofollow">Source</a>
+</div>
+      
+    </p>
+    <p>
+        &copy; Copyright 2016, Atooma Inc.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.4.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

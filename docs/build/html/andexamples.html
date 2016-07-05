@@ -1,0 +1,1394 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>4.8. Building Own Applications &mdash; Resonance AI SDK 2.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.6/spacelab/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/atooma.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="Resonance AI SDK 2.1.0 documentation" href="index.html" />
+    <link rel="up" title="4. Resonance Android SDK framework" href="android.html" />
+    <link rel="prev" title="4.7. Resonance API Client" href="andresonance.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          Resonance AI SDK</a>
+        <span class="navbar-text navbar-version pull-left"><b>2.1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Contents <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-we-believe">1.1. What We Believe?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-is-resonance-why-there-is-an-atooma-app-on-the-market">1.2. What Is Resonance - Why There Is An Atooma App On The Market?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-is-resonance-sdk">1.3. What Is Resonance SDK?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-you-need">1.4. What You Need?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getstart.html">2. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getstart.html#declaring-features-of-interest">2.1. Declaring Features of Interest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getstart.html#data-sources-definition">2.2. Data Sources Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getstart.html#rule-engine-configuration">2.3. Rule Engine Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="iosstart.html">3. Resonance iOS SDK framework</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="iosstart.html#add-the-sdk-to-your-xcode-project">3.1. Add the SDK to your Xcode Project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#configure-the-app-capabilities">3.1.1. Configure the app capabilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#set-the-location-service-permission-string">3.1.2. Set the Location Service permission string</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#objective-c">3.1.3. Objective-C</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#all-set">3.1.4. All set!</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iosstart.html#data-collector">3.2. Data Collector</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#configure-the-collector">3.2.1. Configure the collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#ask-for-permission">3.2.2. Ask for Permission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#start-the-collector">3.2.3. Start the collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#stop-the-collector">3.2.4. Stop the collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#logger">3.2.5. Logger</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iosstart.html#activity-tracking">3.3. Activity Tracking</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#history">3.3.1. History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#realtime-event-monitoring-beta">3.3.2. Realtime Event Monitoring (Beta)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="android.html">4. Resonance Android SDK framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="andcore.html">4.1. Core Concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andcore.html#modules">4.1.1. Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andcore.html#rules">4.1.2. Rules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andcore.html#data-analysis">4.1.3. Data Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="andengine.html">4.2. Rules Engine</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andengine.html#the-ruledefinition-class">4.2.1. The <em>RuleDefinition</em> Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andengine.html#the-atooma-class">4.2.2. The <em>Atooma</em> Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andengine.html#the-ruleconflictschecker-class">4.2.3. The <em>RuleConflictsChecker</em> Class</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="andxml.html">4.3. Defining Rules With XML</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andxml.html#property-values">4.3.1. Property Values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andxml.html#external-provider-calls">4.3.2. External Provider Calls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andxml.html#example">4.3.3. Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andxml.html#atooma-binary-format">4.3.4. Atooma binary format</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="andprogramming.html">4.4. Developing Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andprogramming.html#creating-modules">4.4.1. Creating Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andprogramming.html#creating-value-types">4.4.2. Creating Value Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andprogramming.html#creating-triggers">4.4.3. Creating Triggers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andprogramming.html#creating-condition-checkers">4.4.4. Creating Condition Checkers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andprogramming.html#trigger-and-condition-checker-affinity">4.4.5. Trigger and Condition Checker Affinity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andprogramming.html#creating-performers">4.4.6. Creating Performers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="andreference.html">4.5. Modules API Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#oauth-based-modules">4.5.1. OAuth Based Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#activity-manager">4.5.2. Activity Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#airplane">4.5.3. Airplane</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#alarm">4.5.4. Alarm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#battery">4.5.5. Battery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#bluetooth">4.5.6. Bluetooth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#camera">4.5.7. Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#contacts">4.5.8. Contacts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#core">4.5.9. Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#data-sync">4.5.10. Data Sync</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#module-dropbox">4.5.11. Dropbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#facebook">4.5.12. Facebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#google-calendar">4.5.13. Google Calendar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#google-drive">4.5.14. Google Drive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#gmail">4.5.15. Gmail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#headphone">4.5.16. Headphone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#module-instagram">4.5.17. Instagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#location">4.5.18. Location</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#notification">4.5.19. Notification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#shake">4.5.20. Shake</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#sms">4.5.21. SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#telephony">4.5.22. Telephony</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#text-to-speech">4.5.23. Text To Speech</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#module-twitter">4.5.24. Twitter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#wifi">4.5.25. WiFi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#weather">4.5.26. Weather</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="andactivity.html">4.6. Activity Tracking</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andactivity.html#theoretical-basis">4.6.1. Theoretical Basis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andactivity.html#monitoring-events">4.6.2. Monitoring Events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andactivity.html#accessing-activity-history">4.6.3. Accessing activity history</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andactivity.html#sub-activities">4.6.4. Sub Activities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andactivity.html#next-steps">4.6.5. Next Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andactivity.html#bibliography">4.6.6. Bibliography</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="andresonance.html">4.7. Resonance API Client</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andresonance.html#theoretical-basis">4.7.1. Theoretical Basis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andresonance.html#resonanceapiclient-class">4.7.2. <em>ResonanceApiClient</em> class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andresonance.html#data-collector">4.7.3. Data Collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andresonance.html#advisor">4.7.4. Advisor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andresonance.html#next-steps">4.7.5. Next Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andresonance.html#bibliography">4.7.6. Bibliography</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.8. Building Own Applications</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example-0-rule-engine-basics">4.8.1. Example 0 - Rule Engine Basics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-1-external-providers">4.8.2. Example 1 - External Providers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-2-custom-modules">4.8.3. Example 2 - Custom Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-3-xml-as-a-template">4.8.4. Example 3 - XML As A Template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-4-parking-reminder">4.8.5. Example 4 - Parking Reminder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-5-timeline">4.8.6. Example 5 - Timeline</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="android.html#stable-gradle-configuration">4.9. Stable Gradle Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android.html#basic-manifest-configuration">4.10. Basic Manifest Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android.html#changelog">4.11. Changelog</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">4.8. Building Own Applications</a><ul>
+<li><a class="reference internal" href="#example-0-rule-engine-basics">4.8.1. Example 0 - Rule Engine Basics</a></li>
+<li><a class="reference internal" href="#example-1-external-providers">4.8.2. Example 1 - External Providers</a></li>
+<li><a class="reference internal" href="#example-2-custom-modules">4.8.3. Example 2 - Custom Modules</a><ul>
+<li><a class="reference internal" href="#modules-with-authentication">4.8.3.1. Modules with Authentication</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#example-3-xml-as-a-template">4.8.4. Example 3 - XML As A Template</a><ul>
+<li><a class="reference internal" href="#strategy-in-depth">4.8.4.1. Strategy In Depth</a></li>
+<li><a class="reference internal" href="#sdk-classes">4.8.4.2. SDK Classes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#example-4-parking-reminder">4.8.5. Example 4 - Parking Reminder</a></li>
+<li><a class="reference internal" href="#example-5-timeline">4.8.6. Example 5 - Timeline</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="building-own-applications">
+<span id="andexamples"></span><h1>4.8. Building Own Applications<a class="headerlink" href="#building-own-applications" title="Permalink to this headline">¶</a></h1>
+<p>Target of this section is providing some examples, showing in depth how Resonance SDK can be used for simplifying development of specific tasks.</p>
+<p>All examples reported in next sections require your environment to be configured according to specifications reported in sections <a class="reference internal" href="android.html#releases-stable"><span class="std std-ref">Stable Gradle Configuration</span></a> and <a class="reference internal" href="android.html#manifest-stable"><span class="std std-ref">Basic Manifest Configuration</span></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Code for all examples is available on following GitHub repositories:</p>
+<ul class="last simple">
+<li><a class="reference external" href="https://github.com/atooma/atooma-engine-sdk-samples">Rules Engine Examples</a>.</li>
+<li><a class="reference external" href="https://github.com/atooma/android-resonance-sdk-samples">Resonance Examples</a>.</li>
+</ul>
+</div>
+<div class="section" id="example-0-rule-engine-basics">
+<h2>4.8.1. Example 0 - Rule Engine Basics<a class="headerlink" href="#example-0-rule-engine-basics" title="Permalink to this headline">¶</a></h2>
+<p>Let&#8217;s suppose we would like to create a simple rule allowing to show a toast notification when connecting to a specific WiFi network.</p>
+<p>Atooma SDK already provides a couple of modules that can be combined for such scope: <a class="reference internal" href="modules/wifi.html#module-wifi"><span class="std std-ref">WiFi</span></a> and <a class="reference internal" href="modules/notification.html#module-notification"><span class="std std-ref">Notification</span></a>. It&#8217;s easily possible to exploit them for building the rule described by the XML below:</p>
+<div class="highlight-xml"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;</span>
+<span class="nt">&lt;rule</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.atooma.com/sdk/rule&quot;</span> <span class="na">version=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;title&gt;</span>Notify when connecting to WiFi<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;description&gt;</span>Shows a notification when connecting to WiFi<span class="nt">&lt;/description&gt;</span>
+  <span class="nt">&lt;required-module</span> <span class="na">version=</span><span class="s">&quot;1&quot;</span> <span class="na">id=</span><span class="s">&quot;CORE&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;required-module</span> <span class="na">version=</span><span class="s">&quot;1&quot;</span> <span class="na">id=</span><span class="s">&quot;WIFI&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;required-module</span> <span class="na">version=</span><span class="s">&quot;1&quot;</span> <span class="na">id=</span><span class="s">&quot;NOTIFICATION&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;property</span> <span class="na">literal=</span><span class="s">&quot;string&quot;</span> <span class="na">typeId=</span><span class="s">&quot;STRING&quot;</span> <span class="na">typeModule=</span><span class="s">&quot;CORE&quot;</span> <span class="na">id=</span><span class="s">&quot;par-0&quot;</span><span class="nt">&gt;</span>
+    home_wifi
+  <span class="nt">&lt;/property&gt;</span>
+  <span class="nt">&lt;property</span> <span class="na">literal=</span><span class="s">&quot;string&quot;</span> <span class="na">typeId=</span><span class="s">&quot;STRING&quot;</span> <span class="na">typeModule=</span><span class="s">&quot;CORE&quot;</span> <span class="na">id=</span><span class="s">&quot;par-1&quot;</span><span class="nt">&gt;</span>
+    Connected to home WiFi!
+  <span class="nt">&lt;/property&gt;</span>
+  <span class="nt">&lt;trigger</span> <span class="na">id=</span><span class="s">&quot;CONNECTED&quot;</span> <span class="na">module=</span><span class="s">&quot;WIFI&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">&quot;SSID&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;property-ref</span> <span class="na">id=</span><span class="s">&quot;par-0&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/parameter&gt;</span>
+  <span class="nt">&lt;/trigger&gt;</span>
+  <span class="nt">&lt;performer</span> <span class="na">id=</span><span class="s">&quot;TOAST&quot;</span> <span class="na">module=</span><span class="s">&quot;NOTIFICATION&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">&quot;TEXT&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;property-ref</span> <span class="na">id=</span><span class="s">&quot;par-1&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/parameter&gt;</span>
+  <span class="nt">&lt;/performer&gt;</span>
+<span class="nt">&lt;/rule&gt;</span>
+</pre></div>
+</td></tr></table></div>
+<p>For having such rule running on a own application, it&#8217;s commonly enough to implement an <em>Application</em> class similar to the one reported below:</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">WhiteLabelApplication</span> <span class="kd">extends</span> <span class="n">Application</span> <span class="o">{</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">();</span>
+    <span class="c1">// starting rules engine (if needed)</span>
+    <span class="k">if</span> <span class="o">(!</span><span class="n">Atooma</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="k">this</span><span class="o">).</span><span class="na">isEngineInited</span><span class="o">())</span> <span class="o">{</span>
+      <span class="c1">// getting core modules</span>
+      <span class="n">Module</span><span class="o">[]</span> <span class="n">modules</span> <span class="o">=</span> <span class="n">Modules</span><span class="o">.</span><span class="na">getBasicModules</span><span class="o">();</span>
+      <span class="c1">// initializing Atooma engine</span>
+      <span class="n">Atooma</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="k">this</span><span class="o">).</span><span class="na">init</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">MainActivity</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">modules</span><span class="o">);</span>
+      <span class="c1">// loading specific rules from assets folder</span>
+      <span class="n">loadRule</span><span class="o">(</span><span class="s">&quot;wifi_notification.xml&quot;</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+
+  <span class="cm">/**</span>
+<span class="cm">   * Support method allowing to load a rule from assets.</span>
+<span class="cm">   */</span>
+  <span class="kd">private</span> <span class="kt">void</span> <span class="nf">loadRule</span><span class="o">(</span><span class="n">String</span> <span class="n">rule</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// trying to load all rules</span>
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="c1">// loading xml with rule definition</span>
+      <span class="n">InputStream</span> <span class="n">stream</span> <span class="o">=</span> <span class="n">getAssets</span><span class="o">().</span><span class="na">open</span><span class="o">(</span><span class="n">xml</span><span class="o">);</span>
+      <span class="c1">// loading rule definition from xml</span>
+      <span class="n">Atooma</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="k">this</span><span class="o">).</span><span class="na">loadRule</span><span class="o">(</span><span class="n">stream</span><span class="o">);</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">Log</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="s">&quot;Atooma&quot;</span><span class="o">,</span> <span class="s">&quot;unable to open xml from assets: &quot;</span> <span class="o">+</span> <span class="n">xml</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="example-1-external-providers">
+<h2>4.8.2. Example 1 - External Providers<a class="headerlink" href="#example-1-external-providers" title="Permalink to this headline">¶</a></h2>
+<p>Let&#8217;s now suppose we would like to take rule previously defined and dynamically adapt WiFi network name to device / user. In such case we cannot statically define it within rule definition. We need instead to use a proper provider class and use it as reported in the example below:</p>
+<div class="highlight-xml"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;</span>
+<span class="nt">&lt;rule</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.atooma.com/sdk/rule&quot;</span> <span class="na">version=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;title&gt;</span>Notify when connecting to home WiFi<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;description&gt;</span>Shows a notification when connecting to home WiFi<span class="nt">&lt;/description&gt;</span>
+  <span class="nt">&lt;required-module</span> <span class="na">version=</span><span class="s">&quot;1&quot;</span> <span class="na">id=</span><span class="s">&quot;CORE&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;required-module</span> <span class="na">version=</span><span class="s">&quot;1&quot;</span> <span class="na">id=</span><span class="s">&quot;WIFI&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;required-module</span> <span class="na">version=</span><span class="s">&quot;1&quot;</span> <span class="na">id=</span><span class="s">&quot;NOTIFICATION&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;property</span> <span class="na">literal=</span><span class="s">&quot;string&quot;</span> <span class="na">typeId=</span><span class="s">&quot;STRING&quot;</span> <span class="na">typeModule=</span><span class="s">&quot;CORE&quot;</span> <span class="na">id=</span><span class="s">&quot;par-1&quot;</span><span class="nt">&gt;</span>
+    Connected to home WiFi!
+  <span class="nt">&lt;/property&gt;</span>
+  <span class="nt">&lt;trigger</span> <span class="na">id=</span><span class="s">&quot;CONNECTED&quot;</span> <span class="na">module=</span><span class="s">&quot;WIFI&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">&quot;SSID&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;external-provider-call</span>
+        <span class="na">className=</span><span class="s">&quot;com.atooma.sample.WiFiProvider&quot;</span>
+        <span class="na">methodName=</span><span class="s">&quot;getSSID&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/parameter&gt;</span>
+  <span class="nt">&lt;/trigger&gt;</span>
+  <span class="nt">&lt;performer</span> <span class="na">id=</span><span class="s">&quot;TOAST&quot;</span> <span class="na">module=</span><span class="s">&quot;NOTIFICATION&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">&quot;TEXT&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;property-ref</span> <span class="na">id=</span><span class="s">&quot;par-1&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/parameter&gt;</span>
+  <span class="nt">&lt;/performer&gt;</span>
+<span class="nt">&lt;/rule&gt;</span>
+</pre></div>
+</td></tr></table></div>
+<p>WiFi network name will be defined by using static method <code class="docutils literal"><span class="pre">getSSID()</span></code> from class <code class="docutils literal"><span class="pre">WiFiProvider</span></code>, that will be implemented as follows:</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">WifiProvider</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="n">VT_String_Wrapper</span> <span class="nf">getSSID</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">String</span> <span class="n">ssid</span> <span class="o">=</span> <span class="n">getHomeWiFi</span><span class="o">();</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="n">VT_String_Wrapper</span><span class="o">(</span><span class="n">ssid</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="kd">private</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">getHomeWiFi</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">String</span> <span class="n">ssid</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="o">;</span>
+    <span class="c1">// logic for getting home wifi name here</span>
+    <span class="c1">// (e.g. from shared preferences or sqlite)</span>
+    <span class="k">return</span> <span class="n">ssid</span><span class="o">;</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Please notice that class <code class="docutils literal"><span class="pre">VT_String_Wrapper</span></code> is a wrapper for <code class="docutils literal"><span class="pre">STRING</span></code> data type, defined within Atooma SDK.</p>
+</div>
+<div class="section" id="example-2-custom-modules">
+<span id="examples-two"></span><h2>4.8.3. Example 2 - Custom Modules<a class="headerlink" href="#example-2-custom-modules" title="Permalink to this headline">¶</a></h2>
+<p>Let&#8217;s suppose we would like to create an application allowing to change device wallpaper when plugging headphones. Wallpaper should be defined according to current location.</p>
+<p>Basing on provided description, this is just a simple rule with one trigger and one performer:</p>
+<ul class="simple">
+<li>Event condition is already handled by Atooma SDK through the <a class="reference internal" href="modules/headphone.html#module-headphone"><span class="std std-ref">Headphone</span></a> module, so we don&#8217;t need to implement anything.</li>
+<li>Performer part requires the implementation of a dedicated module. We can think about an integration with <code class="docutils literal"><span class="pre">FLICKR</span></code>, allowing to get photos from a specific Flickr group, basing on location coordinates provided by devices.</li>
+</ul>
+<p>Analyzing in depth the implementation of backend is out of our scope. Let&#8217;s just imagine to have the following endpoint, working as an indirection between Android clients and Flickr server:</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">GET</span> <span class="n">http</span><span class="o">:</span><span class="c1">//www.mydomain.coma/api/flickr/pictures/&lt;lat&gt;/&lt;lon&gt;</span>
+</pre></div>
+</div>
+<p>What we need to do is defining a proper Flickr module, implementing one single component, that is the required performer <code class="docutils literal"><span class="pre">PE_Wallpaper</span></code>.</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">_FLICKR</span> <span class="kd">extends</span> <span class="n">Module</span> <span class="o">{</span>
+
+  <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">MODULE_ID</span> <span class="o">=</span> <span class="s">&quot;FLICKR&quot;</span><span class="o">;</span>
+
+  <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">MODULE_VERSION</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+
+  <span class="kd">public</span> <span class="nf">_FLICKR</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">super</span><span class="o">(</span><span class="n">MODULE_ID</span><span class="o">,</span> <span class="n">MODULE_VERSION</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">declareDependencies</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">declareDependency</span><span class="o">(</span><span class="s">&quot;CORE&quot;</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">protected</span> <span class="kt">boolean</span> <span class="nf">init</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">registerComponents</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">registerPerformer</span><span class="o">(</span><span class="s">&quot;WALLPAPER&quot;</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="k">new</span> <span class="n">PE_SetWallpaper</span><span class="o">());</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">destroy</span><span class="o">()</span> <span class="o">{</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Rule definition will be as follows:</p>
+<div class="highlight-xml"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;</span>
+<span class="nt">&lt;rule</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.atooma.com/sdk/rule&quot;</span> <span class="na">version=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;title&gt;</span>Wallpaper on demand<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;description&gt;</span>Update wallpaper when plugging headphone<span class="nt">&lt;/description&gt;</span>
+  <span class="nt">&lt;required-module</span> <span class="na">version=</span><span class="s">&quot;1&quot;</span> <span class="na">id=</span><span class="s">&quot;CORE&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;required-module</span> <span class="na">version=</span><span class="s">&quot;1&quot;</span> <span class="na">id=</span><span class="s">&quot;HEADPHONE&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;required-module</span> <span class="na">version=</span><span class="s">&quot;1&quot;</span> <span class="na">id=</span><span class="s">&quot;FLICKR&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;trigger</span> <span class="na">id=</span><span class="s">&quot;HEADPHONE-PLUGGED&quot;</span> <span class="na">module=</span><span class="s">&quot;HEADPHONE&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;performer</span> <span class="na">id=</span><span class="s">&quot;WALLPAPER&quot;</span> <span class="na">module=</span><span class="s">&quot;FLICKR&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/rule&gt;</span>
+</pre></div>
+</td></tr></table></div>
+<p>For details on the implementation of requested Flickr performer you can refer to code available <a class="reference external" href="https://github.com/atooma/atooma-engine-sdk-samples">here</a> on GitHub.</p>
+<div class="section" id="modules-with-authentication">
+<h3>4.8.3.1. Modules with Authentication<a class="headerlink" href="#modules-with-authentication" title="Permalink to this headline">¶</a></h3>
+<p>Let&#8217;s suppose we would like to implement a module as an integration for an external service (e.g. Facebook, Gmail and so on). In such case it&#8217;s always essential to include an implementation for the authentication workflow (commonly based on OAuth).</p>
+<p>Atooma SDK comes with some classes allowing to simplify management of such workflow, providing some utilities for activating / deactivating external services connection as well as for checking whether connection is active or not.</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Class used for handling connection / disconnection operations,</span>
+<span class="cm"> * with reference to a specific external service, called Channel.</span>
+<span class="cm"> */</span>
+<span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">ChannelHandler</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Class used for representing an Atooma Module implementing</span>
+<span class="cm"> * an integration with an external service, so requiring a</span>
+<span class="cm"> * dedicated ChannelHandler to be provided.</span>
+<span class="cm"> */</span>
+<span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">ChannelModule</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Singleton class used for managing all available</span>
+<span class="cm"> * channel handlers.</span>
+<span class="cm"> */</span>
+<span class="kd">class</span> <span class="nc">ChannelsManager</span>
+</pre></div>
+</td></tr></table></div>
+<p>Let&#8217;s go in depth with <code class="docutils literal"><span class="pre">ChannelHandler</span></code> first. Following methods must be implemented:</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Returns the id of module that this ChannelHandler is</span>
+<span class="cm"> * aimed to handle.</span>
+<span class="cm"> */</span>
+<span class="kd">abstract</span> <span class="kd">protected</span> <span class="n">String</span> <span class="nf">getModuleId</span><span class="o">();</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Execute code for connecting to Channel. This commonly</span>
+<span class="cm"> * consists in access to a specific authentication Activity.</span>
+<span class="cm"> */</span>
+<span class="kd">abstract</span> <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">doConnection</span><span class="o">(</span><span class="n">Activity</span> <span class="n">source</span><span class="o">);</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Implements logic for extracting token and username</span>
+<span class="cm"> * from result intent.</span>
+<span class="cm"> */</span>
+<span class="kd">abstract</span> <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">extractAndSaveDataFromResult</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">Intent</span> <span class="n">data</span><span class="o">);</span>
+</pre></div>
+</td></tr></table></div>
+<p>Additional methods are available for getting information like stored token.</p>
+<p>It follow a sample implementation for Gmail:</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nd">@Override</span>
+<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">doConnection</span><span class="o">(</span><span class="n">Activity</span> <span class="n">source</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">Intent</span> <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Intent</span><span class="o">(</span><span class="n">source</span><span class="o">,</span> <span class="n">GmailActivity</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+  <span class="n">source</span><span class="o">.</span><span class="na">startActivityForResult</span><span class="o">(</span><span class="n">intent</span><span class="o">,</span> <span class="mi">8888</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isConnected</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">return</span> <span class="o">!</span><span class="n">TextUtils</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">(</span><span class="n">getToken</span><span class="o">(</span><span class="n">context</span><span class="o">));</span>
+<span class="o">}</span>
+
+<span class="nd">@Override</span>
+<span class="kd">protected</span> <span class="n">String</span> <span class="nf">getModuleId</span><span class="o">()</span> <span class="o">{</span>
+  <span class="k">return</span> <span class="s">&quot;GMAIL&quot;</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="nd">@Override</span>
+<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">extractAndSaveDataFromResult</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">Intent</span> <span class="n">data</span><span class="o">)</span> <span class="o">{</span>
+  <span class="c1">// getting params</span>
+  <span class="n">String</span> <span class="n">username</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="na">getStringExtra</span><span class="o">(</span><span class="n">GoogleOAuth2Activity</span><span class="o">.</span><span class="na">PARAM_EMAIL</span><span class="o">);</span>
+  <span class="n">String</span> <span class="n">token</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="na">getStringExtra</span><span class="o">(</span><span class="n">GoogleOAuth2Activity</span><span class="o">.</span><span class="na">PARAM_TOKEN</span><span class="o">);</span>
+  <span class="c1">// store params</span>
+  <span class="n">saveUser</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">username</span><span class="o">);</span>
+  <span class="n">saveToken</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">token</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Moving to <code class="docutils literal"><span class="pre">ChannelModule</span></code> class, it&#8217;s just important to properly implement following abstract methods:</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Returns the id of the ChannelHandler. It&#39;s common</span>
+<span class="cm"> * to use module id for this step.</span>
+<span class="cm"> */</span>
+<span class="kd">abstract</span> <span class="kd">protected</span> <span class="n">String</span> <span class="nf">getChannelHandlerKey</span><span class="o">();</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Returns a ChannelHandler instance.</span>
+<span class="cm"> */</span>
+<span class="kd">abstract</span> <span class="kd">protected</span> <span class="n">ChannelHandler</span> <span class="nf">buildChannelHandler</span><span class="o">();</span>
+</pre></div>
+</td></tr></table></div>
+<p>In case of Gmail we&#8217;ll have something like this:</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nd">@Override</span>
+<span class="kd">protected</span> <span class="n">String</span> <span class="nf">getChannelHandlerKey</span><span class="o">()</span> <span class="o">{</span>
+  <span class="k">return</span> <span class="n">Channels</span><span class="o">.</span><span class="na">GMAIL</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="nd">@Override</span>
+<span class="kd">protected</span> <span class="n">ChannelHandler</span> <span class="nf">buildChannelHandler</span><span class="o">()</span> <span class="o">{</span>
+  <span class="k">return</span> <span class="k">new</span> <span class="n">GmailChannelHandler</span><span class="o">();</span>
+<span class="o">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>As already discussed, purpose of <code class="docutils literal"><span class="pre">ChannelHandler</span></code> classes is not only to activate / deactivate a connection. They can also be used through <code class="docutils literal"><span class="pre">ChannelHandler</span></code> for checking whether a channel is activated or not. This is essential when trying to load a rule that include modules interacting with external services. Of course in case some channels are not activated it&#8217;s possible that rule cannot be activated too.</p>
+<p>Below is reported a code excerpt, showing how to activate rules depending on used modules:</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">//...</span>
+
+<span class="n">Atooma</span> <span class="n">atooma</span> <span class="o">=</span> <span class="n">Atooma</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="n">context</span><span class="o">);</span>
+<span class="n">ChannelsManager</span> <span class="n">cm</span> <span class="o">=</span> <span class="n">ChannelsManager</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="n">context</span><span class="o">);</span>
+<span class="k">try</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">atooma</span><span class="o">.</span><span class="na">getActiveRules</span><span class="o">().</span><span class="na">containsKey</span><span class="o">(</span><span class="n">id</span><span class="o">))</span> <span class="o">{</span>
+        <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">LOG_TAG</span><span class="o">,</span> <span class="s">&quot;already active rule: &quot;</span> <span class="o">+</span> <span class="n">xml</span><span class="o">);</span>
+        <span class="k">return</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="c1">// loading xml with rule definition</span>
+    <span class="n">InputStream</span> <span class="n">stream</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="na">getAssets</span><span class="o">().</span><span class="na">open</span><span class="o">(</span><span class="n">xml</span><span class="o">);</span>
+    <span class="c1">// building rule definition</span>
+    <span class="n">RuleDefinition</span> <span class="n">def</span> <span class="o">=</span> <span class="n">XMLDeserializer</span><span class="o">.</span><span class="na">deserialize</span><span class="o">(</span><span class="n">stream</span><span class="o">,</span> <span class="n">id</span><span class="o">);</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">cm</span><span class="o">.</span><span class="na">isActivable</span><span class="o">(</span><span class="n">def</span><span class="o">))</span> <span class="o">{</span>
+        <span class="c1">// loading rule definition into engine</span>
+        <span class="n">atooma</span><span class="o">.</span><span class="na">loadRule</span><span class="o">(</span><span class="n">def</span><span class="o">);</span>
+        <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">LOG_TAG</span><span class="o">,</span> <span class="s">&quot;activated rule: &quot;</span> <span class="o">+</span> <span class="n">xml</span><span class="o">);</span>
+    <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+        <span class="n">Log</span><span class="o">.</span><span class="na">d</span><span class="o">(</span><span class="n">LOG_TAG</span><span class="o">,</span> <span class="s">&quot;unable to activate rule: &quot;</span> <span class="o">+</span> <span class="n">xml</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">Log</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="n">LOG_TAG</span><span class="o">,</span> <span class="s">&quot;unable to open xml from assets: &quot;</span> <span class="o">+</span> <span class="n">xml</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">XMLRuleException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">Log</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="n">LOG_TAG</span><span class="o">,</span> <span class="s">&quot;unable to deserialize xml: &quot;</span> <span class="o">+</span> <span class="n">xml</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="example-3-xml-as-a-template">
+<h2>4.8.4. Example 3 - XML As A Template<a class="headerlink" href="#example-3-xml-as-a-template" title="Permalink to this headline">¶</a></h2>
+<p>Let&#8217;s suppose we would like to implement an application allowing to show a notification when entering into specific locations (e.g. Home, Work and so on). Application will expose a single <code class="docutils literal"><span class="pre">Activity</span></code> allowing to check active rules and create new rules based on current location, as reported in the screenshot below.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/example.png"><img alt="Sample Application" src="_images/example.png" style="width: 500px;" /></a>
+</div>
+<p>Of course we can rely on existing modules <a class="reference internal" href="modules/location.html#module-location"><span class="std std-ref">Location</span></a> and <a class="reference internal" href="modules/notification.html#module-notification"><span class="std std-ref">Notification</span></a> for implementing logic, but here we are going to use a rule definition in XML format as a template for multiple rules, instead of building just a simple rule definition from it.</p>
+<p>Using an XML as a template requires data to be dynamic and External Providers are the right mechanism for dealing with dynamic data. Our XML will be as follows:</p>
+<div class="highlight-xml"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;</span>
+<span class="nt">&lt;rule</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.atooma.com/sdk/rule&quot;</span> <span class="na">version=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;title&gt;</span>Notify when entering location<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;description&gt;</span>-<span class="nt">&lt;/description&gt;</span>
+  <span class="nt">&lt;required-module</span> <span class="na">version=</span><span class="s">&quot;1&quot;</span> <span class="na">id=</span><span class="s">&quot;CORE&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;required-module</span> <span class="na">version=</span><span class="s">&quot;3&quot;</span> <span class="na">id=</span><span class="s">&quot;LOCATION&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;required-module</span> <span class="na">version=</span><span class="s">&quot;1&quot;</span> <span class="na">id=</span><span class="s">&quot;NOTIFICATION&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;trigger</span> <span class="na">id=</span><span class="s">&quot;IN&quot;</span> <span class="na">module=</span><span class="s">&quot;LOCATION&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">&quot;AREA&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;external-provider-call</span>
+        <span class="na">className=</span><span class="s">&quot;com.atooma.sdk.samples.providers.OwnLocationsProvider&quot;</span>
+        <span class="na">methodName=</span><span class="s">&quot;getArea&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/parameter&gt;</span>
+  <span class="nt">&lt;/trigger&gt;</span>
+  <span class="nt">&lt;performer</span> <span class="na">id=</span><span class="s">&quot;TOAST&quot;</span> <span class="na">module=</span><span class="s">&quot;NOTIFICATION&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;parameter</span> <span class="na">id=</span><span class="s">&quot;TEXT&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;external-provider-call</span>
+        <span class="na">className=</span><span class="s">&quot;com.atooma.sdk.samples.providers.NotificationsProvider&quot;</span>
+        <span class="na">methodName=</span><span class="s">&quot;getMessage&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/parameter&gt;</span>
+  <span class="nt">&lt;/performer&gt;</span>
+<span class="nt">&lt;/rule&gt;</span>
+</pre></div>
+</td></tr></table></div>
+<p>The real issue here is understanding how to handle locations as well as to ensure that multiple rule definitions are created from XML basing on such locations:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#xml-template-strategy"><span class="std std-ref">Strategy In Depth</span></a> describes an effective strategy for exploiting an XML template, handling corresponding rules data.</li>
+<li><a class="reference internal" href="#xml-template-classes"><span class="std std-ref">SDK Classes</span></a> provides details on SDK classes, preventing developer from dealing with complexity of template data management.</li>
+</ul>
+<div class="section" id="strategy-in-depth">
+<span id="xml-template-strategy"></span><h3>4.8.4.1. Strategy In Depth<a class="headerlink" href="#strategy-in-depth" title="Permalink to this headline">¶</a></h3>
+<p>As a first step we can proceed by exploiting <code class="docutils literal"><span class="pre">LocationsManager</span></code> class that is available in <a class="reference internal" href="andcommons.html#andcommons"><span class="std std-ref">Commons Library</span></a>. Once local storage is populated with some location objects, what we can easily do is defining a method iterating over all locations and loading rules from XML template into the execution engine.</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Support method for loading location based rules</span>
+<span class="cm"> * starting from locations provider</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">loadLocationRules</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">String</span> <span class="n">template</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">try</span> <span class="o">{</span>
+    <span class="c1">// getting singleton for accessing locations provider</span>
+    <span class="n">LocationsManager</span> <span class="n">lm</span> <span class="o">=</span> <span class="n">LocationsManager</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span>
+    <span class="c1">// getting list of locations</span>
+    <span class="n">List</span><span class="o">&lt;</span><span class="n">LocationWrapper</span><span class="o">&gt;</span> <span class="n">locations</span> <span class="o">=</span> <span class="n">lm</span><span class="o">.</span><span class="na">readLocationsList</span><span class="o">(</span><span class="n">context</span><span class="o">);</span>
+    <span class="c1">// iterating over locations</span>
+    <span class="k">for</span> <span class="o">(</span><span class="n">LocationWrapper</span> <span class="n">location</span> <span class="o">:</span> <span class="n">locations</span><span class="o">)</span> <span class="o">{</span>
+      <span class="c1">// loading rule based on location</span>
+      <span class="n">loadRule</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">template</span><span class="o">,</span> <span class="n">location</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">AuthorityNotSetException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">Log</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="n">LogTags</span><span class="o">.</span><span class="na">LOCATION</span><span class="o">,</span> <span class="n">ex</span><span class="o">.</span><span class="na">getMessage</span><span class="o">(),</span> <span class="n">ex</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Let&#8217;s now go in depth with definition of <code class="docutils literal"><span class="pre">loadRule</span></code> method reported in code above. Idea is quite simple. Since we need to load rules one by one, it&#8217;s enough to push each location into a queue handled by the <code class="docutils literal"><span class="pre">OwnLocationsProvider</span></code> class (that is the external provider class reported in the XML) and then to request Atooma SDK to load the rule. When building it, <code class="docutils literal"><span class="pre">getArea</span></code> method within <code class="docutils literal"><span class="pre">OwnLocationsProvider</span></code> will be invoked, returning the head of the queue.</p>
+<div class="figure align-center">
+<img alt="Interaction Model" src="_images/locations_provider.png" />
+</div>
+<p>Below is reported the implementation of the method.</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Support method for loading a location based rule encoded</span>
+<span class="cm"> * by the provided xml template into engine, returning a</span>
+<span class="cm"> * boolean value telling if operation was successfully</span>
+<span class="cm"> * completed or not.</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">loadRule</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">String</span> <span class="n">xml</span><span class="o">,</span> <span class="n">LocationWrapper</span> <span class="n">location</span><span class="o">)</span> <span class="o">{</span>
+  <span class="c1">// can activate rule?</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">OwnLocationsProvider</span><span class="o">.</span><span class="na">pushLocation</span><span class="o">(</span><span class="n">location</span><span class="o">))</span> <span class="o">{</span>
+    <span class="c1">// we are using a template, so we must use location</span>
+    <span class="c1">// as seed for building rule id</span>
+    <span class="n">String</span> <span class="n">id</span> <span class="o">=</span> <span class="n">MD5</span><span class="o">.</span><span class="na">compute</span><span class="o">(</span><span class="n">xml</span><span class="o">)</span> <span class="o">+</span> <span class="n">location</span><span class="o">.</span><span class="na">getLabel</span><span class="o">();</span>
+    <span class="n">loadRule</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">xml</span><span class="o">,</span> <span class="n">id</span><span class="o">);</span>
+    <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+<span class="o">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Please notice that here we are using a custom identifier for rules, that is made by combining a hash of rule title (that is always the same since we are using the same XML template) with location label. With this strategy we are sure that same rule (or better, same rule on same location) won&#8217;t be loaded twice.</p>
+<p>Here it is the implementation of the <code class="docutils literal"><span class="pre">OwnLocationsProvider</span></code> class:</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">OwnLocationsProvider</span> <span class="o">{</span>
+
+  <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">LOG_TAG</span> <span class="o">=</span> <span class="s">&quot;Location&quot;</span><span class="o">;</span>
+
+  <span class="cm">/**</span>
+<span class="cm">   * Collection used for putting locations to be used</span>
+<span class="cm">   * as output for getArea method</span>
+<span class="cm">   */</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">LocationWrapper</span><span class="o">&gt;</span> <span class="n">LOCATIONS_QUEUE</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+
+  <span class="cm">/**</span>
+<span class="cm">   * Collection used for putting locations already used in</span>
+<span class="cm">   * with current rule</span>
+<span class="cm">   */</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">LocationWrapper</span><span class="o">&gt;</span> <span class="n">ACTIVE_RULES</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+
+  <span class="cm">/**</span>
+<span class="cm">   * Provider method used in xml rule location_notification.xml</span>
+<span class="cm">   */</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="n">VT_Area_Wrapper</span> <span class="nf">getArea</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">LocationWrapper</span> <span class="n">wrapper</span> <span class="o">=</span> <span class="n">popLocation</span><span class="o">();</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">wrapper</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="k">new</span> <span class="n">VT_Area_Wrapper</span><span class="o">(</span><span class="n">wrapper</span><span class="o">);</span>
+    <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+      <span class="n">Log</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="n">LOG_TAG</span><span class="o">,</span> <span class="s">&quot;missing location parameter&quot;</span><span class="o">);</span>
+      <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+
+  <span class="cm">/**</span>
+<span class="cm">   * Add a location to the collection storing the ones</span>
+<span class="cm">   * to be used for activating rules</span>
+<span class="cm">   */</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kd">synchronized</span> <span class="kt">boolean</span> <span class="nf">pushLocation</span><span class="o">(</span><span class="n">LocationWrapper</span> <span class="n">location</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// putting in queue just in case rule doesn&#39;t exist yet</span>
+    <span class="kt">boolean</span> <span class="n">toPush</span> <span class="o">=</span> <span class="o">!</span><span class="n">ACTIVE_RULES</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">location</span><span class="o">);</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">toPush</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">ACTIVE_RULES</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">location</span><span class="o">);</span>
+      <span class="n">LOCATIONS_QUEUE</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">location</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">toPush</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="cm">/**</span>
+<span class="cm">   * Get a location from the collection storing the ones</span>
+<span class="cm">   * to be used for activating rules, then removes it from</span>
+<span class="cm">   * such collection</span>
+<span class="cm">   */</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kd">synchronized</span> <span class="n">LocationWrapper</span> <span class="nf">popLocation</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">LocationWrapper</span> <span class="n">location</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="n">LOCATIONS_QUEUE</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">index</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">location</span> <span class="o">=</span> <span class="n">LOCATIONS_QUEUE</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">index</span><span class="o">);</span>
+      <span class="n">LOCATIONS_QUEUE</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="n">index</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">location</span><span class="o">;</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="sdk-classes">
+<span id="xml-template-classes"></span><h3>4.8.4.2. SDK Classes<a class="headerlink" href="#sdk-classes" title="Permalink to this headline">¶</a></h3>
+<p>Dealing with rules data in case of XML templates may be tricky. That&#8217;s why Atooma SDK comes with some useful classes that help developers with such task. Please notice that these classes are available starting from SDK libraries version 1.0.1.</p>
+<p>Let&#8217;s suppose we would like to handle location based rules mentioned in previous section. What we need to do is to extend following classes:</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Representation of template rules data. In our case, implementation</span>
+<span class="cm"> * of this class should include just management of a Location object.</span>
+<span class="cm"> */</span>
+<span class="kd">class</span> <span class="nc">TemplateRule</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Representation of the queue for rules data. It mus implement</span>
+<span class="cm"> * method getWrapperObjects, that is aimed to provide a map with</span>
+<span class="cm"> * all values to be pushed into rule with an external provider call.</span>
+<span class="cm"> */</span>
+<span class="kd">class</span> <span class="nc">TemplateRuleDataQueue</span><span class="o">&lt;</span><span class="n">T</span> <span class="kd">extends</span> <span class="n">TemplateRule</span><span class="o">&gt;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Representation of the storage for rules data. It is</span>
+<span class="cm"> * currently implemented by using SharedPreferences, but</span>
+<span class="cm"> * in future multiple implementations will be provided.</span>
+<span class="cm"> */</span>
+<span class="kd">class</span> <span class="nc">TemplateDataStorageHelper</span><span class="o">&lt;</span><span class="n">T</span> <span class="kd">extends</span> <span class="n">TemplateRule</span><span class="o">&gt;</span>
+</pre></div>
+</td></tr></table></div>
+<p>Below is reported implementation for all classes mentioned above:</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">LocationRuleData</span> <span class="kd">extends</span> <span class="n">TemplateRule</span> <span class="o">{</span>
+
+  <span class="kd">private</span> <span class="n">LocationWrapper</span> <span class="n">mLocation</span><span class="o">;</span>
+
+  <span class="kd">public</span> <span class="nf">LocationRuleData</span><span class="o">(</span><span class="n">String</span> <span class="n">id</span><span class="o">,</span> <span class="n">String</span> <span class="n">template</span><span class="o">,</span> <span class="n">LocationWrapper</span> <span class="n">location</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">super</span><span class="o">(</span><span class="n">id</span><span class="o">,</span> <span class="n">template</span><span class="o">);</span>
+    <span class="n">mLocation</span> <span class="o">=</span> <span class="n">location</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="n">LocationWrapper</span> <span class="nf">getLocation</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">mLocation</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">protected</span> <span class="n">TemplateRuleDataQueue</span> <span class="nf">getQueue</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// let&#39;s suppose to exploit a singleton implementation</span>
+    <span class="k">return</span> <span class="n">LocationRuleDataQueue</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">protected</span> <span class="n">TemplateDataStorageHelper</span> <span class="nf">getStorageHelper</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// let&#39;s suppose to exploit a singleton implementation</span>
+    <span class="k">return</span> <span class="n">LocationRuleStorageHelper</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</pre></div>
+</td></tr></table></div>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">LocationRuleDataQueue</span> <span class="kd">extends</span> <span class="n">TemplateRuleDataQueue</span><span class="o">&lt;</span><span class="n">LocationRuleData</span><span class="o">&gt;</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">LOCATION_PARAM</span> <span class="o">=</span> <span class="s">&quot;location&quot;</span><span class="o">;</span>
+
+  <span class="c1">// ...</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">protected</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span><span class="n">ValueTypeWrapper</span><span class="o">&gt;</span> <span class="nf">getWrapperObjects</span><span class="o">(</span><span class="n">LocationRuleData</span> <span class="n">item</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span><span class="n">ValueTypeWrapper</span><span class="o">&gt;</span> <span class="n">wrappers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TreeMap</span><span class="o">&lt;&gt;();</span>
+    <span class="n">wrappers</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">LOCATION_PARAM</span><span class="o">,</span> <span class="k">new</span> <span class="n">VT_Area_Wrapper</span><span class="o">(</span><span class="n">item</span><span class="o">.</span><span class="na">getLocation</span><span class="o">()));</span>
+    <span class="k">return</span> <span class="n">wrappers</span><span class="o">;</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</pre></div>
+</td></tr></table></div>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">LocationRuleStorageHelper</span> <span class="kd">extends</span> <span class="n">TemplateDataStorageHelper</span><span class="o">&lt;</span><span class="n">LocationRuleData</span><span class="o">&gt;</span> <span class="o">{</span>
+
+  <span class="c1">// ...</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">protected</span> <span class="n">String</span> <span class="nf">getStorageFilename</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="s">&quot;locations&quot;</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">protected</span> <span class="n">Class</span><span class="o">&lt;</span><span class="n">LocationRuleData</span><span class="o">[]&gt;</span> <span class="nf">getItemArrayClass</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">LocationRuleData</span><span class="o">[].</span><span class="na">class</span><span class="o">;</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>On top of these classes, below is shown the implementation of External Provider static class.</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">LocationRuleProvider</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="n">VT_Area_Wrapper</span> <span class="nf">getArea</span><span class="o">(</span><span class="n">String</span> <span class="n">ruleId</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">VT_Area_Wrapper</span> <span class="n">wrapper</span> <span class="o">=</span> <span class="o">(</span><span class="n">VT_Area_Wrapper</span><span class="o">)</span> <span class="n">LocationRuleDataQueue</span><span class="o">.</span><span class="na">getInstance</span><span class="o">()</span>
+      <span class="o">.</span><span class="na">getParamWrapper</span><span class="o">(</span><span class="n">ruleId</span><span class="o">,</span> <span class="n">LocationRuleDataQueue</span><span class="o">.</span><span class="na">LOCATION_PARAM</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">wrapper</span><span class="o">;</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="example-4-parking-reminder">
+<h2>4.8.5. Example 4 - Parking Reminder<a class="headerlink" href="#example-4-parking-reminder" title="Permalink to this headline">¶</a></h2>
+<p>This is a typical example showing potential of Activity Tracking within Resonance SDK. In order to retrieve parking position of user car, it&#8217;s enough to register following event within <em>Application</em> class and implement logic of <code class="docutils literal"><span class="pre">execute</span></code> method.</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">// building event to monitor</span>
+<span class="n">Event</span> <span class="n">event</span> <span class="o">=</span> <span class="n">TransitionEvent</span><span class="o">.</span><span class="na">Builder</span><span class="o">.</span><span class="na">create</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">from</span><span class="o">(</span><span class="n">ActivityItem</span><span class="o">.</span><span class="na">ActivityType</span><span class="o">.</span><span class="na">CAR</span><span class="o">)</span>   <span class="c1">// transition from Car</span>
+  <span class="o">.</span><span class="na">toAll</span><span class="o">()</span>                               <span class="c1">// to any activity</span>
+  <span class="o">.</span><span class="na">doAction</span><span class="o">(</span><span class="k">new</span> <span class="n">Action</span><span class="o">()</span> <span class="o">{</span>               <span class="c1">// action to execute</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">execute</span><span class="o">(</span><span class="n">ActivityItem</span> <span class="n">from</span><span class="o">,</span> <span class="n">ActivityItem</span> <span class="n">to</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">LocationWrapper</span> <span class="n">location</span> <span class="o">=</span> <span class="n">from</span><span class="o">.</span><span class="na">getLocation</span><span class="o">();</span>
+        <span class="c1">// use location data</span>
+    <span class="o">}</span>
+<span class="o">}).</span><span class="na">build</span><span class="o">();</span>
+<span class="c1">// register event for monitoring</span>
+<span class="n">EventHandler</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">addEvent</span><span class="o">(</span><span class="n">mEvent</span><span class="o">);</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="example-5-timeline">
+<span id="example-timeline"></span><h2>4.8.6. Example 5 - Timeline<a class="headerlink" href="#example-5-timeline" title="Permalink to this headline">¶</a></h2>
+<p>This section provides details on an activity tracking application, built using Resonance SDK. Source code is available <a class="reference external" href="https://github.com/atooma/android-resonance-sdk-samples">here</a> on GitHub. Idea is to create a personal tracker, displaying current user activity as well as activity recorded for past days, using a <code class="docutils literal"><span class="pre">ViewPager</span></code> for organizing data on multiple fragments.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/timeline.png"><img alt="Daily Activities" src="_images/timeline.png" style="width: 250px;" /></a>
+</div>
+<p>Most interesting part is of course represented by <code class="docutils literal"><span class="pre">TimelineFragment</span></code> class, that encapsulates the main logic for accessing history and displaying real time information.</p>
+<p>Below is reported a simplified implementation for <code class="docutils literal"><span class="pre">loadData()</span></code> method. It basically exploits <code class="docutils literal"><span class="pre">ResonanceAdvisor</span></code> for retrieving and showing data belonging to date provided in input.</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kd">private</span> <span class="kt">void</span> <span class="nf">loadData</span><span class="o">(</span><span class="n">Date</span> <span class="n">date</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">mResonanceApiClient</span><span class="o">.</span><span class="na">getAdvisor</span><span class="o">().</span><span class="na">getDailyActivities</span><span class="o">(</span><span class="n">date</span><span class="o">,</span>
+      <span class="k">new</span> <span class="n">AdvisedElementsResponseHandler</span><span class="o">&lt;</span><span class="n">ActivityItem</span><span class="o">&gt;()</span> <span class="o">{</span>
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onAdvisedElementsRetrievedListener</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">ActivityItem</span><span class="o">&gt;</span> <span class="n">activities</span><span class="o">)</span> <span class="o">{</span>
+          <span class="c1">// updating dataset to show in ListView or RecyclerView</span>
+          <span class="n">mDataset</span><span class="o">.</span><span class="na">clear</span><span class="o">();</span>
+          <span class="n">mDataset</span><span class="o">.</span><span class="na">addAll</span><span class="o">(</span><span class="n">activities</span><span class="o">);</span>
+          <span class="n">mAdapter</span><span class="o">.</span><span class="na">notifyDataSetChanged</span><span class="o">();</span>
+        <span class="o">}</span>
+      <span class="o">});</span>
+<span class="o">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Of course, in case provided date is current one, it&#8217;s important to update timeline in real time. That&#8217;s why <code class="docutils literal"><span class="pre">TimelineFragment</span></code> registers a couple of activity tracking events to be monitored by Resonance, as shown below:</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">// class instance variables</span>
+<span class="kd">private</span> <span class="n">TransitionEvent</span> <span class="n">mTransitionEvent</span><span class="o">;</span>
+<span class="kd">private</span> <span class="n">DurationEvent</span> <span class="n">mDurationEvent</span><span class="o">;</span>
+
+<span class="c1">// ...</span>
+
+<span class="c1">// implementation within onCreate method</span>
+<span class="c1">// mDate is date linked with current fragment</span>
+<span class="n">mTransition</span> <span class="o">=</span> <span class="n">TransitionEvent</span><span class="o">.</span><span class="na">Builder</span><span class="o">.</span><span class="na">create</span><span class="o">()</span>
+    <span class="o">.</span><span class="na">all</span><span class="o">()</span>
+    <span class="o">.</span><span class="na">doAction</span><span class="o">(</span><span class="k">new</span> <span class="n">Action</span><span class="o">()</span> <span class="o">{</span>
+      <span class="nd">@Override</span>
+      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">execute</span><span class="o">(</span><span class="n">ActivityItem</span> <span class="n">from</span><span class="o">,</span> <span class="n">ActivityItem</span> <span class="n">to</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">loadData</span><span class="o">(</span><span class="n">mDate</span><span class="o">);</span>
+      <span class="o">}</span>
+    <span class="o">}).</span><span class="na">build</span><span class="o">();</span>
+
+<span class="n">mDurationEvent</span> <span class="o">=</span> <span class="n">DurationEvent</span><span class="o">.</span><span class="na">Builder</span><span class="o">.</span><span class="na">create</span><span class="o">()</span>
+    <span class="o">.</span><span class="na">all</span><span class="o">()</span>
+    <span class="o">.</span><span class="na">doAction</span><span class="o">(</span><span class="k">new</span> <span class="n">Action</span><span class="o">()</span> <span class="o">{</span>
+      <span class="nd">@Override</span>
+      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">execute</span><span class="o">(</span><span class="n">ActivityItem</span> <span class="n">from</span><span class="o">,</span> <span class="n">ActivityItem</span> <span class="n">to</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">loadData</span><span class="o">();</span>
+      <span class="o">}</span>
+    <span class="o">}).</span><span class="na">build</span><span class="o">();</span>
+
+<span class="c1">// ...</span>
+
+<span class="c1">// register for updates in onResume, handling</span>
+<span class="c1">// updates only if date is today</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">isToday</span><span class="o">())</span> <span class="o">{</span>
+  <span class="n">EventHandler</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">addEvent</span><span class="o">(</span><span class="n">mTEvent</span><span class="o">);</span>
+  <span class="n">EventHandler</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">addEvent</span><span class="o">(</span><span class="n">mDEvent</span><span class="o">);</span>
+  <span class="c1">// ...</span>
+<span class="o">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="_sources/andexamples.txt"
+     rel="nofollow">Source</a>
+</div>
+      
+    </p>
+    <p>
+        &copy; Copyright 2016, Atooma Inc.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.4.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

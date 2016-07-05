@@ -20,7 +20,9 @@ This documentation is aimed to provide in depth details on how to approach devel
 	intro
 	getstart
 	iosstart
+	android
 ..
 	* :ref:`intro` - Here you can find answers to questions like *what is Resonance?* and *what can I do with Resonance SDK?*. Your understanding of Atooma potential starts from here!
 	* :ref:`getstart` - The first step!
 	* :ref:`iosstart` - The iOS first step!
+	* :ref:`android` - The iOS first step!

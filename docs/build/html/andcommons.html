@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Commons Library &mdash; Resonance AI SDK 2.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.6/spacelab/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/atooma.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="Resonance AI SDK 2.1.0 documentation" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          Resonance AI SDK</a>
+        <span class="navbar-text navbar-version pull-left"><b>2.1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Contents <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-we-believe">1.1. What We Believe?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-is-resonance-why-there-is-an-atooma-app-on-the-market">1.2. What Is Resonance - Why There Is An Atooma App On The Market?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-is-resonance-sdk">1.3. What Is Resonance SDK?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-you-need">1.4. What You Need?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getstart.html">2. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getstart.html#declaring-features-of-interest">2.1. Declaring Features of Interest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getstart.html#data-sources-definition">2.2. Data Sources Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getstart.html#rule-engine-configuration">2.3. Rule Engine Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="iosstart.html">3. Resonance iOS SDK framework</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="iosstart.html#add-the-sdk-to-your-xcode-project">3.1. Add the SDK to your Xcode Project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#configure-the-app-capabilities">3.1.1. Configure the app capabilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#set-the-location-service-permission-string">3.1.2. Set the Location Service permission string</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#objective-c">3.1.3. Objective-C</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#all-set">3.1.4. All set!</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iosstart.html#data-collector">3.2. Data Collector</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#configure-the-collector">3.2.1. Configure the collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#ask-for-permission">3.2.2. Ask for Permission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#start-the-collector">3.2.3. Start the collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#stop-the-collector">3.2.4. Stop the collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#logger">3.2.5. Logger</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iosstart.html#activity-tracking">3.3. Activity Tracking</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#history">3.3.1. History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#realtime-event-monitoring-beta">3.3.2. Realtime Event Monitoring (Beta)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="android.html">4. Resonance Android SDK framework</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="andactivity.html">4.1. Activity Tracking</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andactivity.html#theoretical-basis">4.1.1. Theoretical Basis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andactivity.html#monitoring-events">4.1.2. Monitoring Events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andactivity.html#accessing-activity-history">4.1.3. Accessing activity history</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andactivity.html#sub-activities">4.1.4. Sub Activities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andactivity.html#next-steps">4.1.5. Next Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andactivity.html#bibliography">4.1.6. Bibliography</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="android.html#stable-gradle-configuration">4.2. Stable Gradle Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android.html#basic-manifest-configuration">4.3. Basic Manifest Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android.html#changelog">4.4. Changelog</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Commons Library</a><ul>
+<li><a class="reference internal" href="#locationsmanager">LocationsManager</a></li>
+<li><a class="reference internal" href="#oauth-1-2">OAuth 1 &amp; 2</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="commons-library">
+<span id="andcommons"></span><h1>Commons Library<a class="headerlink" href="#commons-library" title="Permalink to this headline">¶</a></h1>
+<p>Atooma SDK provides on a set of reusable components, packed into a specific Commons Library. An overview of (some of) such components is reported below:</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Class</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="#class-locationsmanager"><span class="std std-ref">LocationsManager</span></a></td>
+<td>Singleton allowing to manage locations through access to specific content provider.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="programming.html#devperformers">OAuth1Activity OAuth2Activity</a></td>
+<td>Activities used for simplifying management of the the OAuth 1 &amp; 2 flows.</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="locationsmanager">
+<span id="class-locationsmanager"></span><h2>LocationsManager<a class="headerlink" href="#locationsmanager" title="Permalink to this headline">¶</a></h2>
+<p>Atooma Commons Library includes a Content Provider allowing to manage locations to be used within <a class="reference internal" href="modules/location.html#module-location"><span class="std std-ref">Location</span></a> module. Including such provider in own application is extremely simple, since it requires just a declaration in Android Manifest and a directive in Application class as follows:</p>
+<div class="highlight-xml"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">&lt;provider</span>
+  <span class="na">android:name=</span><span class="s">&quot;com.atooma.commons.location.LocationsProvider&quot;</span>
+  <span class="na">android:authorities=</span><span class="s">&quot;com.atooma.sdk.sample.locations&quot;</span>
+  <span class="na">android:exported=</span><span class="s">&quot;false&quot;</span>
+  <span class="na">android:enabled=</span><span class="s">&quot;true&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</td></tr></table></div>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">()</span> <span class="o">{</span>
+  <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">();</span>
+  <span class="c1">// defining locations provider authority</span>
+  <span class="n">LocationsProvider</span><span class="o">.</span><span class="na">setAuthority</span><span class="o">(</span><span class="s">&quot;com.atooma.sdk.sample.locations&quot;</span><span class="o">);</span>
+  <span class="c1">// ...</span>
+<span class="o">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Please notice that authority is defined by developers. It&#8217;s just important that same value is assigned both in Android Manifest and Application class.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In case authority is not defined in Application class, <code class="docutils literal"><span class="pre">AuthorityNotSetException</span></code> is thrown</p>
+</div>
+<p>Once configuration is completed, it&#8217;s possible to exploit singleton class <code class="docutils literal"><span class="pre">LocationsManager</span></code> for reading / writing locations. Such class includes following methods:</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Returns a location from storage, searching by it&#39;s label.</span>
+<span class="cm"> * Returns null in case no location is found.</span>
+<span class="cm"> */</span>
+<span class="n">LocationWrapper</span> <span class="nf">readLocationByLabel</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">String</span> <span class="n">label</span><span class="o">)</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Returns all location from storage.</span>
+<span class="cm"> */</span>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">LocationWrapper</span><span class="o">&gt;</span> <span class="nf">readLocationsList</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">)</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Adds a location to the storage. Method returns an exception</span>
+<span class="cm"> * in case location already exists.</span>
+<span class="cm"> */</span>
+<span class="kt">void</span> <span class="nf">addLocation</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">LocationWrapper</span> <span class="n">wrapper</span><span class="o">)</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Update an existing location already available in storage,</span>
+<span class="cm"> * basing on its label. Method throws an exception in case</span>
+<span class="cm"> * location does not exist.</span>
+<span class="cm"> */</span>
+<span class="kt">void</span> <span class="nf">updateLocation</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">LocationWrapper</span> <span class="n">wrapper</span><span class="o">)</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Deletes provided locations from storage, basing on their</span>
+<span class="cm"> * labels.</span>
+<span class="cm"> */</span>
+<span class="kt">void</span> <span class="nf">deleteLocations</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">LocationWrapper</span><span class="o">&gt;</span> <span class="n">locations</span><span class="o">)</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Deletes all locations from storage.</span>
+<span class="cm"> */</span>
+<span class="kt">void</span> <span class="nf">clearLocations</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="oauth-1-2">
+<h2>OAuth 1 &amp; 2<a class="headerlink" href="#oauth-1-2" title="Permalink to this headline">¶</a></h2>
+<p>Activities used for simplifying management of the the OAuth 1 &amp; 2 flows. Additional details to be provided soon.</p>
+<span class="target" id="class-md5"></span></div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="_sources/andcommons.txt"
+     rel="nofollow">Source</a>
+</div>
+      
+    </p>
+    <p>
+        &copy; Copyright 2016, Atooma Inc.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.4.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

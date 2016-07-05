@@ -1,0 +1,439 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>4.7. Resonance API Client &mdash; Resonance AI SDK 2.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.6/spacelab/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/atooma.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="Resonance AI SDK 2.1.0 documentation" href="index.html" />
+    <link rel="up" title="4. Resonance Android SDK framework" href="android.html" />
+    <link rel="next" title="4.8. Building Own Applications" href="andexamples.html" />
+    <link rel="prev" title="4.6. Activity Tracking" href="andactivity.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          Resonance AI SDK</a>
+        <span class="navbar-text navbar-version pull-left"><b>2.1.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Contents <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-we-believe">1.1. What We Believe?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-is-resonance-why-there-is-an-atooma-app-on-the-market">1.2. What Is Resonance - Why There Is An Atooma App On The Market?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-is-resonance-sdk">1.3. What Is Resonance SDK?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#what-you-need">1.4. What You Need?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getstart.html">2. Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getstart.html#declaring-features-of-interest">2.1. Declaring Features of Interest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getstart.html#data-sources-definition">2.2. Data Sources Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getstart.html#rule-engine-configuration">2.3. Rule Engine Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="iosstart.html">3. Resonance iOS SDK framework</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="iosstart.html#add-the-sdk-to-your-xcode-project">3.1. Add the SDK to your Xcode Project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#configure-the-app-capabilities">3.1.1. Configure the app capabilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#set-the-location-service-permission-string">3.1.2. Set the Location Service permission string</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#objective-c">3.1.3. Objective-C</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#all-set">3.1.4. All set!</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iosstart.html#data-collector">3.2. Data Collector</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#configure-the-collector">3.2.1. Configure the collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#ask-for-permission">3.2.2. Ask for Permission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#start-the-collector">3.2.3. Start the collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#stop-the-collector">3.2.4. Stop the collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#logger">3.2.5. Logger</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iosstart.html#activity-tracking">3.3. Activity Tracking</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#history">3.3.1. History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iosstart.html#realtime-event-monitoring-beta">3.3.2. Realtime Event Monitoring (Beta)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="android.html">4. Resonance Android SDK framework</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="andcore.html">4.1. Core Concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andcore.html#modules">4.1.1. Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andcore.html#rules">4.1.2. Rules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andcore.html#data-analysis">4.1.3. Data Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="andengine.html">4.2. Rules Engine</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andengine.html#the-ruledefinition-class">4.2.1. The <em>RuleDefinition</em> Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andengine.html#the-atooma-class">4.2.2. The <em>Atooma</em> Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andengine.html#the-ruleconflictschecker-class">4.2.3. The <em>RuleConflictsChecker</em> Class</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="andxml.html">4.3. Defining Rules With XML</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andxml.html#property-values">4.3.1. Property Values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andxml.html#external-provider-calls">4.3.2. External Provider Calls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andxml.html#example">4.3.3. Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andxml.html#atooma-binary-format">4.3.4. Atooma binary format</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="andprogramming.html">4.4. Developing Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andprogramming.html#creating-modules">4.4.1. Creating Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andprogramming.html#creating-value-types">4.4.2. Creating Value Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andprogramming.html#creating-triggers">4.4.3. Creating Triggers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andprogramming.html#creating-condition-checkers">4.4.4. Creating Condition Checkers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andprogramming.html#trigger-and-condition-checker-affinity">4.4.5. Trigger and Condition Checker Affinity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andprogramming.html#creating-performers">4.4.6. Creating Performers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="andreference.html">4.5. Modules API Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#oauth-based-modules">4.5.1. OAuth Based Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#activity-manager">4.5.2. Activity Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#airplane">4.5.3. Airplane</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#alarm">4.5.4. Alarm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#battery">4.5.5. Battery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#bluetooth">4.5.6. Bluetooth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#camera">4.5.7. Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#contacts">4.5.8. Contacts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#core">4.5.9. Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#data-sync">4.5.10. Data Sync</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#module-dropbox">4.5.11. Dropbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#facebook">4.5.12. Facebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#google-calendar">4.5.13. Google Calendar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#google-drive">4.5.14. Google Drive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#gmail">4.5.15. Gmail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#headphone">4.5.16. Headphone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#module-instagram">4.5.17. Instagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#location">4.5.18. Location</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#notification">4.5.19. Notification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#shake">4.5.20. Shake</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#sms">4.5.21. SMS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#telephony">4.5.22. Telephony</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#text-to-speech">4.5.23. Text To Speech</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#module-twitter">4.5.24. Twitter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#wifi">4.5.25. WiFi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andreference.html#weather">4.5.26. Weather</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="andactivity.html">4.6. Activity Tracking</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andactivity.html#theoretical-basis">4.6.1. Theoretical Basis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andactivity.html#monitoring-events">4.6.2. Monitoring Events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andactivity.html#accessing-activity-history">4.6.3. Accessing activity history</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andactivity.html#sub-activities">4.6.4. Sub Activities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andactivity.html#next-steps">4.6.5. Next Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andactivity.html#bibliography">4.6.6. Bibliography</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.7. Resonance API Client</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#theoretical-basis">4.7.1. Theoretical Basis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#resonanceapiclient-class">4.7.2. <em>ResonanceApiClient</em> class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-collector">4.7.3. Data Collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#advisor">4.7.4. Advisor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#next-steps">4.7.5. Next Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bibliography">4.7.6. Bibliography</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="andexamples.html">4.8. Building Own Applications</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="andexamples.html#example-0-rule-engine-basics">4.8.1. Example 0 - Rule Engine Basics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andexamples.html#example-1-external-providers">4.8.2. Example 1 - External Providers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andexamples.html#example-2-custom-modules">4.8.3. Example 2 - Custom Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andexamples.html#example-3-xml-as-a-template">4.8.4. Example 3 - XML As A Template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andexamples.html#example-4-parking-reminder">4.8.5. Example 4 - Parking Reminder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="andexamples.html#example-5-timeline">4.8.6. Example 5 - Timeline</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="android.html#stable-gradle-configuration">4.9. Stable Gradle Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android.html#basic-manifest-configuration">4.10. Basic Manifest Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android.html#changelog">4.11. Changelog</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">4.7. Resonance API Client</a><ul>
+<li><a class="reference internal" href="#theoretical-basis">4.7.1. Theoretical Basis</a></li>
+<li><a class="reference internal" href="#resonanceapiclient-class">4.7.2. <em>ResonanceApiClient</em> class</a></li>
+<li><a class="reference internal" href="#data-collector">4.7.3. Data Collector</a></li>
+<li><a class="reference internal" href="#advisor">4.7.4. Advisor</a><ul>
+<li><a class="reference internal" href="#advised-locations">4.7.4.1. Advised Locations</a></li>
+<li><a class="reference internal" href="#points-of-interest">4.7.4.2. Points of Interest</a></li>
+<li><a class="reference internal" href="#user-routine">4.7.4.3. User Routine</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#next-steps">4.7.5. Next Steps</a></li>
+<li><a class="reference internal" href="#bibliography">4.7.6. Bibliography</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="resonance-api-client">
+<span id="andresonance"></span><h1>4.7. Resonance API Client<a class="headerlink" href="#resonance-api-client" title="Permalink to this headline">¶</a></h1>
+<p>Target of this section is to provide a high level description of the core concepts behind the Resonance environment. Focus will be on SDK main features and how to exploit them.</p>
+<div class="section" id="theoretical-basis">
+<h2>4.7.1. Theoretical Basis<a class="headerlink" href="#theoretical-basis" title="Permalink to this headline">¶</a></h2>
+<p>Information about the activities listed in <a class="reference internal" href="andactivity.html#activity-tracking-events"><span class="std std-ref">Monitoring Events</span></a> and the snapshot of the device containing geographical data of itself are uploaded on our server for storage and periodical analysis in order to identify:</p>
+<ul class="simple">
+<li><strong>Recurrent locations</strong> - The system can identify the coordinates of the user&#8217;s home and job defining as home &#8220;the place where the user sleeps&#8221; and as work &#8220;the major location where every-days activities are done&#8221;.</li>
+<li><strong>User&#8217;s routine</strong> - The algorithms developed estimate the probability that the user is performing a specific activity at a specific time.</li>
+<li><strong>Points of interest</strong> - Restaurants, cinemas, theaters, museums and so on, according to user&#8217;s locations.</li>
+</ul>
+<p>To process all these data we use temporal series analysis strategies as: study and evaluation of chaotic attractor regarding users movements, determination of maximum Lyapunov exponent <a class="reference internal" href="#resonance-bib"><span class="std std-ref">[ Wolf1985 ]</span></a>, <a class="reference internal" href="#resonance-bib"><span class="std std-ref">[ Mukherjee1997 ]</span></a>, <a class="reference internal" href="#resonance-bib"><span class="std std-ref">[ Franchi2014 ]</span></a> and clustering algorithms as <em>K-means</em> and <em>G-means</em>.</p>
+</div>
+<div class="section" id="resonanceapiclient-class">
+<span id="resonance-class"></span><h2>4.7.2. <em>ResonanceApiClient</em> class<a class="headerlink" href="#resonanceapiclient-class" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">ResonanceApiClient</span></code> is a singleton class that should be started together with Android Application.</p>
+<p>It follows common logic to be adopted for a Resonance ready application:</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ResonanceApp</span> <span class="kd">extends</span> <span class="n">Application</span> <span class="o">{</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">()</span> <span class="o">{</span>
+      <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">();</span>
+      <span class="c1">// building ResonanceApiClient instance</span>
+      <span class="n">ResonanceApiClient</span> <span class="n">client</span> <span class="o">=</span> <span class="n">ResonanceApiClient</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+      <span class="c1">// starting ResonanceApiClient instance</span>
+      <span class="n">client</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>In reported code, logic for initializing <code class="docutils literal"><span class="pre">ResonanceApiClient</span></code> instance is encapsulated into <code class="docutils literal"><span class="pre">with()</span></code> method, that is responsible for defining several parameters in several areas (e.g. parameters for activity tracking, endpoints base url and so on). Nevertheless it&#8217;s possible on client side to exploit <code class="docutils literal"><span class="pre">ResonanceApiClient.Builder</span></code> class for manually define <code class="docutils literal"><span class="pre">ResonanceApiClient</span></code> configuration, but this practice is discouraged in most cases, since basic settings are commonly adequate for most cases.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">As discussed in <span class="xref std std-ref">andexample</span> section, it&#8217;s possible to configure some Resonance SDK components to be executed within a dedicated private process. In such case, strategy to be adopted for initializing and starting <code class="docutils literal"><span class="pre">ResonanceApiClient</span></code> class is slightly different. Suggestion is to invoke an <code class="docutils literal"><span class="pre">IntentService</span></code> within own <code class="docutils literal"><span class="pre">Application</span></code> class and there to prevent initialization and start of multiple <code class="docutils literal"><span class="pre">ResonanceApiClient</span></code> instances. This is possible because, regardless of process that is executing <code class="docutils literal"><span class="pre">Application</span></code> code, <code class="docutils literal"><span class="pre">IntentService</span></code> method <code class="docutils literal"><span class="pre">onHandleIntent</span></code> will be always executed within the same process, defined at Manifest level.</p>
+</div>
+</div>
+<div class="section" id="data-collector">
+<h2>4.7.3. Data Collector<a class="headerlink" href="#data-collector" title="Permalink to this headline">¶</a></h2>
+<p>When starting <code class="docutils literal"><span class="pre">ResonanceApiClient</span></code> instance, ResonanceSDK automatically starts collecting data concerning device usage. Data are periodically delivered to server with adequate strategy for minimizing battery consumption, and allow to perform analysis on user behavior, determining relevant information about his preferences. This is essential for making predictions as well as for identifying changes in his regular behavioral pattern.</p>
+<p>Going in depth with description of data collector is not essential in this documentation, since developer doesn&#8217;t need to interact with it in any way.</p>
+</div>
+<div class="section" id="advisor">
+<span id="resonance-advisor"></span><h2>4.7.4. Advisor<a class="headerlink" href="#advisor" title="Permalink to this headline">¶</a></h2>
+<p>Outcome of data analysis performed by Atooma backend is made available through a set of useful functions implemented by a dedicated class that is <code class="docutils literal"><span class="pre">ResonanceAdvisor</span></code>. Below is shown code for getting such instance:</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">Context</span> <span class="n">context</span> <span class="o">=</span> <span class="n">getApplicationContext</span><span class="o">();</span>
+<span class="n">ResonanceAdvisor</span> <span class="n">advisor</span> <span class="o">=</span> <span class="n">ResonanceApiClient</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="n">context</span><span class="o">).</span><span class="na">getAdvisor</span><span class="o">();</span>
+</pre></div>
+</td></tr></table></div>
+<div class="section" id="advised-locations">
+<h3>4.7.4.1. Advised Locations<a class="headerlink" href="#advised-locations" title="Permalink to this headline">¶</a></h3>
+<p>Basing on data provided by data collector, Resonance SDK is able to provide details on locations that are frequently accessed by user. In particular, <code class="docutils literal"><span class="pre">ResonanceAdvisor</span></code> implements the following three methods:</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">// Returns a list of locations visited by the current user / device</span>
+<span class="kt">void</span> <span class="nf">getRecurrentLocations</span><span class="o">(</span><span class="n">AdvisedElementsResponseHandler</span><span class="o">&lt;</span><span class="n">AdvisedLocation</span><span class="o">&gt;</span> <span class="n">listener</span><span class="o">);</span>
+
+<span class="c1">// Returns a list of locations matching home type, visited by the current user / device</span>
+<span class="kt">void</span> <span class="nf">getHomeLocation</span><span class="o">(</span><span class="n">AdvisedElementsResponseHandler</span><span class="o">&lt;</span><span class="n">AdvisedLocation</span><span class="o">&gt;</span> <span class="n">listener</span><span class="o">);</span>
+
+<span class="c1">// Returns a list of locations matching work type, visited by the current user / device</span>
+<span class="kt">void</span> <span class="nf">getWorkLocation</span><span class="o">(</span><span class="n">AdvisedElementsResponseHandler</span><span class="o">&lt;</span><span class="n">AdvisedLocation</span><span class="o">&gt;</span> <span class="n">listener</span><span class="o">);</span>
+</pre></div>
+</td></tr></table></div>
+<p>All methods return location asynchronously, through the <code class="docutils literal"><span class="pre">AdvisedElementsResponseHandler</span></code> interface, as shown below:</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">advisor</span><span class="o">.</span><span class="na">getRecurrentLocation</span><span class="o">(</span><span class="k">new</span> <span class="n">AdvisedElementsResponseHandler</span><span class="o">&lt;</span><span class="n">AdvisedLocation</span><span class="o">&gt;()</span> <span class="o">{</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onAdvisedElementsRetrievedListener</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">AdvisedLocation</span><span class="o">&gt;</span> <span class="n">locations</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// work with locations here</span>
+  <span class="o">}</span>
+<span class="o">});</span>
+</pre></div>
+</td></tr></table></div>
+<p>For all locations some relevant data are reported, allowing user to more easily decide whether to exploit them or not:</p>
+<ul class="simple">
+<li><strong>Time Spent</strong> -</li>
+<li><strong>Hours</strong> -</li>
+</ul>
+<p>Moreover, in case of home and work, an additional <strong>confidence</strong> parameter is included, that is the probability reflecting the reliability of provided information.</p>
+</div>
+<div class="section" id="points-of-interest">
+<h3>4.7.4.2. Points of Interest<a class="headerlink" href="#points-of-interest" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">ResonanceAdvisor</span></code> can be used at any time for retrieving information on possible points of interest that are available in current device location, according to the specified search criteria reflecting point type.</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">advisor</span><span class="o">.</span><span class="na">getRestaurants</span><span class="o">(</span><span class="k">new</span> <span class="n">AdvisedElementsResponseHandler</span><span class="o">&lt;</span><span class="n">AdvisedRestaurant</span><span class="o">&gt;()</span> <span class="o">{</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onAdvisedElementsRetrievedListener</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">AdvisedRestaurant</span><span class="o">&gt;</span> <span class="n">elements</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// execute code</span>
+  <span class="o">}</span>
+<span class="o">});</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="user-routine">
+<h3>4.7.4.3. User Routine<a class="headerlink" href="#user-routine" title="Permalink to this headline">¶</a></h3>
+<p>User routine are a series of activities that users perfom during the week. Studing these routine enables to forecast the timeline of the users activities (e.g. what activity comes next), thus we can develop user - device interaction methods to give them information and suggestions to improve their everyday life.</p>
+<p>Below is reported an example of how to retrieve user routine for a specific day of the week, as a list of <code class="docutils literal"><span class="pre">AdvisedRoutineItem</span></code> instances.</p>
+<div class="highlight-java"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">advisor</span><span class="o">.</span><span class="na">getRoutine</span><span class="o">(</span><span class="n">ResonanceAdvisor</span><span class="o">.</span><span class="na">ROUTINE_TYPE_MONDAY</span><span class="o">,</span>
+      <span class="k">new</span> <span class="n">AdvisedElementsResponseHandler</span><span class="o">&lt;</span><span class="n">AdvisedRoutineItem</span><span class="o">&gt;()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onAdvisedElementsRetrievedListener</span><span class="o">(</span><span class="n">List</span><span class="o">&lt;</span><span class="n">AdvisedRoutineItem</span><span class="o">&gt;</span> <span class="n">elements</span><span class="o">)</span> <span class="o">{</span>
+      <span class="c1">// execute code</span>
+    <span class="o">}</span>
+<span class="o">});</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="next-steps">
+<h2>4.7.5. Next Steps<a class="headerlink" href="#next-steps" title="Permalink to this headline">¶</a></h2>
+<p>A new system that harvest information from other services (<em>Facebook</em>, <em>Twitter</em>, <em>Openstreetmap</em>, <em>Tripadvisor</em>) and wearable devices is currently at study. It will improve the recognition of the activity currently performed and will enable us to develop suggestion and tips for users regarding their activities: have dinner, see a movie, listen to a concert and so on.</p>
+</div>
+<div class="section" id="bibliography">
+<span id="resonance-bib"></span><h2>4.7.6. Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="82%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>[ Wolf1985 ]</strong></td>
+<td>Wolf, A., et al. &#8220;Determining Lyapunov exponents from a time series.&#8221;Physica D: Nonlinear Phenomena
+16.3 (1985): 285-317.</td>
+</tr>
+<tr class="row-even"><td><strong>[ Mukherjee1997 ]</strong></td>
+<td>Mukherjee, S., and Edgar, O., and Federico G.. &#8220;Nonlinear prediction of chaotic time series using
+support vector machines.&#8221; Neural Networks for Signal Processing [1997] VII. Proceedings of the 1997
+IEEE Workshop. IEEE, 1997.</td>
+</tr>
+<tr class="row-odd"><td><strong>[Franchi2014]</strong></td>
+<td>Franchi, M., and Leonardo R.. &#8220;Statistical properties of the maximum Lyapunov exponent calculated via
+the divergence rate method.&#8221; Physical Review E 90.6 (2014): 062920.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="_sources/andresonance.txt"
+     rel="nofollow">Source</a>
+</div>
+      
+    </p>
+    <p>
+        &copy; Copyright 2016, Atooma Inc.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.4.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
