@@ -33,7 +33,7 @@ Furthermore sensors, apps and devices are all managed by Resonance as key enable
 
 * **Act** accordingly with the desired action in the right moment for a magic experience.
 
-The power of these apps runs into a Resonance AI Application.
+The power of these apps is deployed by your Resonance AI Application.
 
 To set up a Resonance AI Application you need to have access to the Resonance Dashboard; create a Project to obtain an API Key to embed the SDK in your devices. Once you created a Project, you can deploy your API Key within your Resonance-powered apps and start making data useful for your business. Sign-in to https://console.resonance-ai.com
 
