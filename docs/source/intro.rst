@@ -1,7 +1,7 @@
-Welcome to Resonance AI SDK documentation!
+Welcome to Resonance AI documentation!
 ======================================================
 
-Welcome to the official reference for developing with Resonance AI Android SDK.
+Welcome to the official reference for developing with Resonance AI.
 
 .. note::
 
@@ -31,4 +31,3 @@ This documentation is aimed to provide in depth details on how to approach devel
 	* :ref:`android` - The Android first step!
 	* :ref:`contextapi` - Context API section.
 	* :ref:`infoapi` - Info API section.
-

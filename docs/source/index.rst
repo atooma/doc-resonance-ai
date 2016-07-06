@@ -1,15 +1,37 @@
-.. _intro:
+Table of Contents
+=======================================
+
+This documentation is aimed to provide in depth details on how to approach development and it is organized as follows:
+
+.. toctree::
+	:numbered:
+	:maxdepth: 1
+
+	getstart
+	iosstart
+	android
+	contextapi
+	infoapi
+
+..
+	* :ref:`getstart` - The first step!
+	* :ref:`iosstart` - The iOS first step!
+	* :ref:`android` - The Android first step!
+	* :ref:`contextapi` - Context API section.
+	* :ref:`infoapi` - Info API section.
+
+.. _introduction:
 
 Introduction
 =======================================
 
-This tutorial is intended to get you up and running with the Resonance AI environment. 
+This tutorial is intended to get you up and running with the Resonance AI environment.
 
 **Atooma**'s Resonance AI is a highly integrated and concurrent software engine designed to manage interconnected networks and data streams flowing among apps devices services and businesses. A **Resonance AI Application** is a cloud-based platform-as-a-service that can interconnect all the devices embedding the **Resonance SDK**; networks of these devices can be organized into projects with manageable scope and objectives. Briefly, Resonance AI smooths the great complexity implied in managing large networks of devices, to supply administrators with all the possibilities given by the Internet Of Things. With Resonance your business can easily access its dedicated instance in the platform to deploy and manage its own network of devices.
 
 Resonance AI has been designed focusing on:
 
-* `contexts awareness <https://en.wikipedia.org/wiki/Context_awareness>`_ for your devices: know your peers and gather better intelligence to design better products, 
+* `contexts awareness <https://en.wikipedia.org/wiki/Context_awareness>`_ for your devices: know your peers and gather better intelligence to design better products,
 * modularity in building streams of data from different sources: simply manage developing activities and usage scenarios for your products,
 * integration of multiple sources for verticals needed by your business: add value to your products by leveraging multiple data sources,
 * live notifications and suggestions to thousands of devices: get feedback from and operate your devices instantly.
@@ -19,6 +41,8 @@ These incredible super-powers are granted by the tools implemented by Atooma. A 
 * the cloud-based Resonance Dashboard,
 * the cloud-based Resonance Rule Engine,
 * the Resonance SDK deployed in the devices running your app.
+
+.. _basics:
 
 Basics
 ======================================
@@ -47,6 +71,8 @@ Furthermore sensors, apps and devices are all managed by Resonance as key enable
 By embedding our SDK in your app you deploy the magic of IoT to devices. This magic can be deployed and delivered to customers using your Resonance AI Application.
 
 You can access documentation about how the SDK works and how it can be embedded into any Android/iOS/Web application `here </intro.html>`_. Once you have your app running on many devices, you can enjoy the simplicity of managing your network from the `Resonance Dashboard <link to dashboard doc>`_. All these features come together into a Resonance AI Application, a cloud-based service for large networks of interconnected devices. Contact us for a trial `here <link to trial page>`_.
+
+.. _company:
 
 Our Story as a Company
 =========================================
