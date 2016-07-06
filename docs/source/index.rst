@@ -46,7 +46,7 @@ Furthermore sensors, apps and devices are all managed by Resonance as key enable
 
 By embedding our SDK in your app you deploy the magic of IoT to devices. This magic can be deployed and delivered to customers using your Resonance AI Application.
 
-You can access documentation about how the SDK works and how it can be embedded into any Android/iOS/Web application `here </intro.html>`_. Once you have your app running on many devices, you can enjoy the simplicity of managing your network from the `Resonance Dashboard <link to dashboard doc>`_. All these features come together into a Resonance AI Application, a cloud-based platform for large networks of interconnected devices. Contact us for a trial `here <link to trial page>`_.
+You can access documentation about how the SDK works and how it can be embedded into any Android/iOS/Web application `here </intro.html>`_. Once you have your app running on many devices, you can enjoy the simplicity of managing your network from the `Resonance Dashboard <link to dashboard doc>`_. All these features come together into a Resonance AI Application, a cloud-based service for large networks of interconnected devices. Contact us for a trial `here <link to trial page>`_.
 
 Our Story as a Company
 =========================================
