@@ -5,25 +5,36 @@ Introduction
 
 This tutorial is intended to get you up and running with the Resonance AI environment. 
 
-**Atooma**'s Resonance AI is a highly integrated and concurrent AI engine to manage interconnected devices and data streams flowing among devices, services and businesses. A **Resonance AI Application** is made up of every interconnected device embedding the Resonance SDK. Once you embed the **Resonance SDK** in one of your app you get all the advantages of a Resonance-powered app.
+**Atooma**'s Resonance AI is a highly integrated and concurrent software engine designed to manage interconnected devices and data streams flowing among apps services and businesses. A **Resonance AI Application** is the realization of a tool that can interconnect all the devices embedding the **Resonance SDK**. Briefly, Resonance AI smooths the great complexity implied in managing a large network of devices, to supply the user with all the possibilities given by the Internet Of Things.
 
 Resonance AI has been designed focusing on:
 
-* `contexts awareness <https://en.wikipedia.org/wiki/Context_awareness>`_ for your devices
-* modularity in building streams of data from different sources 
-* integration of multiple sources for verticals needed by your business
-* live notifications and suggestions to thousands of devices
+* `contexts awareness <https://en.wikipedia.org/wiki/Context_awareness>`_ for your devices: know your peers and gather better intelligence to design better products, 
+* modularity in building streams of data from different sources: simply manage developing activities and usage scenarios for your products,
+* integration of multiple sources for verticals needed by your business: add value to your products by leveraging multiple data sources,
+* live notifications and suggestions to thousands of devices: get feedback from and operate your devices instantly.
+
+These incredible super-powers are made possible by the tools implemented by Resonance. A Resonance AI Application is an instance of the harmonic stacking of:
+
+* the cloud-based Resonance Dashboard,
+* the cloud-based Resonance Rule Engine,
+* the Resonance SDK deployed in the devices running your app.
 
 Basics
 ======================================
 
-Resonance SDK is the core that powers any kind of mobile or embedded app you may want to develop to drive your business. It was defined thank to the experience at Atooma with thousands of users and millions of enabled IF-DO rules.
+Resonance SDK is the core that powers any kind of mobile or embedded app you may want to develop to enhance your business. It has been designed along with the great experience at Atooma, collected by serving thousands of users and enabling millions of IF-DO rules. The Resonance Rule Engine carries on billions of operations by communicating real-time with all the devices running the SDK. You can create your app perfectly fitting your business model and integrate our SDK into it, to get all the advantages of our platform. Once you embed the Resonance SDK in one of your app you get all the advantages of a Resonance-powered app.   
 
-A Resonance AI Application integrates all the devices running your apps; your network of devices can be operated via the **Resonance AI Dashboard**: a Web-based control panel from which applications running on multiple devices can be looked over, and rules and notifications can be triggered and propagated all over your network.
+A Resonance AI Application looks over all the devices embedding the SDK; your network of devices can be operated via the **Resonance Dashboard**: a Web-based control panel from which applications running on multiple devices can be monitored and operated; rules and notifications can be triggered and propagated to devices.
 
-We'll walk through from setup to **running your own Resonance Application**.
+We'll walk through from setup to **running your own Resonance AI Application**.
 
-Resonance-powered apps are Android/iOS/Cloud based applications or devices that allow a user to leverage on the power of connecting multiple devices and apps together, with the final goal to give at final users a contextual experience application: automating recurring tasks and suggesting actions.
+To set up a Resonance AI Application you need to have first access to the Resonance Dashboard: create a Project to obtain an API Key to embed the SDK in your devices. Once you created a Project, you can deploy your API Key within your Resonance-powered apps and start making data useful for your business. Sign-in to https://console.resonance-ai.com
+
+Create a Resonance-powered app for your business
+-----------------------------------------------------------
+
+Resonance-powered apps are Android/iOS/Web based applications or devices that allow a user to leverage on the power of connecting multiple devices and apps together, with the final goal to give at final users a contextual experience application: automating recurring tasks and suggesting actions.
 
 Furthermore sensors, apps and devices are all managed by Resonance as key enabler to new generations of smart devices designed to:
 
@@ -35,8 +46,9 @@ Furthermore sensors, apps and devices are all managed by Resonance as key enable
 
 The power of these apps is deployed by your Resonance AI Application.
 
-To set up a Resonance AI Application you need to have access to the Resonance Dashboard; create a Project to obtain an API Key to embed the SDK in your devices. Once you created a Project, you can deploy your API Key within your Resonance-powered apps and start making data useful for your business. Sign-in to https://console.resonance-ai.com
+You can access documentation about how the SDK works and how it can be embedded into any Android/iOS/Web application `here <add internal link>`_.
 
+Once you have your app running on many devices, you can enjoy the simplicity of managing your network from the `Resonance Dashboard <link to dashboard doc>`_.
 
 What We Believe?
 -----------------------------------------------------
@@ -65,7 +77,7 @@ Building our own App and product has been a perfect strategy to understand what 
 What Is Resonance SDK?
 -----------------------------------------------------
 
-Such enormous validation convinced our team to extend such contextual capabilities not only to the end user’s hands but directly towards device vendors and app developers team.
+Such a great validation convinced our team to extend such contextual capabilities not only to the end user’s hands but directly towards device vendors and app developers team.
 
 Imagine to be able to connect your temperature sensor to our engine and being able to enable contextual experiences on your Smart Home App like: *Every Time the temperature threshold is below a certain level and I'm out of home, activate the air conditioning and store the electrical consumptions info into a Drive Doc*. Well, using the Resonance SDK, you can do it in a matter of seconds!
 
@@ -82,4 +94,4 @@ Having such contextual information then you'll be able to proceed by coding a sp
 What You Need?
 -----------------------------------------------------
 
-Using our Platform is super simple: sign-in to https://console.resonance-ai.com and start to build your contextual application. Create your project, get your API keys to embed in your Resonance-powered app.
+Using our platform is super simple: sign-in to https://console.resonance-ai.com and start to build your contextual application. Create your project, get your API keys to embed the SDK in your Resonance-powered app.
