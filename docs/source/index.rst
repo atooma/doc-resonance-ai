@@ -1,15 +1,37 @@
-.. _intro:
+Table of Contents
+=======================================
+
+This documentation is aimed to provide in depth details on how to approach development and it is organized as follows:
+
+.. toctree::
+	:numbered:
+	:maxdepth: 1
+
+	getstart
+	iosstart
+	android
+	contextapi
+	infoapi
+
+..
+	* :ref:`getstart` - The first step!
+	* :ref:`iosstart` - The iOS first step!
+	* :ref:`android` - The Android first step!
+	* :ref:`contextapi` - Context API section.
+	* :ref:`infoapi` - Info API section.
+
+.. _introduction:
 
 Introduction
 =======================================
 
-This tutorial is intended to get you up and running with the Resonance AI environment. 
+This tutorial is intended to get you up and running with the Resonance AI environment.
 
 **Atooma**'s Resonance AI is a highly integrated and concurrent software engine designed to manage interconnected devices and data streams flowing among apps services and businesses. A **Resonance AI Application** is the realization of a tool that can interconnect all the devices embedding the **Resonance SDK**. Briefly, Resonance AI smooths the great complexity implied in managing a large network of devices, to supply the user with all the possibilities given by the Internet Of Things.
 
 Resonance AI has been designed focusing on:
 
-* `contexts awareness <https://en.wikipedia.org/wiki/Context_awareness>`_ for your devices: know your peers and gather better intelligence to design better products, 
+* `contexts awareness <https://en.wikipedia.org/wiki/Context_awareness>`_ for your devices: know your peers and gather better intelligence to design better products,
 * modularity in building streams of data from different sources: simply manage developing activities and usage scenarios for your products,
 * integration of multiple sources for verticals needed by your business: add value to your products by leveraging multiple data sources,
 * live notifications and suggestions to thousands of devices: get feedback from and operate your devices instantly.
@@ -20,10 +42,12 @@ These incredible super-powers are made possible by the tools implemented by Reso
 * the cloud-based Resonance Rule Engine,
 * the Resonance SDK deployed in the devices running your app.
 
+.. _basics:
+
 Basics
 ======================================
 
-Resonance SDK is the core that powers any kind of mobile or embedded app you may want to develop to enhance your business. It has been designed along with the great experience at Atooma, collected by serving thousands of users and enabling millions of IF-DO rules. The **Resonance Rule Engine** carries on billions of operations by communicating real-time with all the devices running the SDK. You can create your app perfectly fitting your business model and integrate our SDK into it, to get all the advantages of our platform. Once you embed the Resonance SDK in one of your app you get all the advantages of a Resonance-powered app.   
+Resonance SDK is the core that powers any kind of mobile or embedded app you may want to develop to enhance your business. It has been designed along with the great experience at Atooma, collected by serving thousands of users and enabling millions of IF-DO rules. The **Resonance Rule Engine** carries on billions of operations by communicating real-time with all the devices running the SDK. You can create your app perfectly fitting your business model and integrate our SDK into it, to get all the advantages of our platform. Once you embed the Resonance SDK in one of your app you get all the advantages of a Resonance-powered app.
 
 A Resonance AI Application looks over all the devices embedding the SDK; your network of devices can be operated via the **Resonance Dashboard**: a Web-based control panel from which applications running on multiple devices can be monitored and operated; rules and notifications can be triggered and propagated to devices.
 
@@ -49,6 +73,8 @@ By embedding our SDK in your app you deploy the magic of IoT to devices. This ma
 You can access documentation about how the SDK works and how it can be embedded into any Android/iOS/Web application `here <add internal link to /intro>`_.
 
 Once you have your app running on many devices, you can enjoy the simplicity of managing your network from the `Resonance Dashboard <link to dashboard doc>`_. Contact us for a trial `here <link to trial page>`_.
+
+.. _company:
 
 Our Story as a Company
 =========================================
