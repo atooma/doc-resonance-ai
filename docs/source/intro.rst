@@ -8,10 +8,10 @@ This tutorial is intended to get you up and running with the Resonance AI enviro
 **Atooma**'s Resonance AI is a highly integrated and concurrent AI engine to manage interconnected devices and data streams flowing among devices, services and businesses. A **Resonance AI Application** is made up of every interconnected device embedding the Resonance SDK. Once you embed the **Resonance SDK** in one of your app you get all the advantages of a Resonance-powered app.
 
 Resonance AI has been designed focusing on:
-- [contexts awareness](https://en.wikipedia.org/wiki/Context_awareness) for your devices
-- modularity in building streams of data from different sources 
-- integration of multiple sources for the needed vertical of your business
-- live notifications and suggestions to thousands of devices
+* [contexts awareness](https://en.wikipedia.org/wiki/Context_awareness) for your devices
+* modularity in building streams of data from different sources 
+* integration of multiple sources for the needed vertical of your business
+* live notifications and suggestions to thousands of devices
 
 Basics
 ======================================
