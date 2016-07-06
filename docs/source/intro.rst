@@ -11,7 +11,7 @@ Resonance AI has been designed focusing on:
 
 * `contexts awareness <https://en.wikipedia.org/wiki/Context_awareness>`_ for your devices
 * modularity in building streams of data from different sources 
-* integration of multiple sources for the needed vertical of your business
+* integration of multiple sources for verticals needed by your business
 * live notifications and suggestions to thousands of devices
 
 Basics
